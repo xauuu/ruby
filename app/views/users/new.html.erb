@@ -1,0 +1,55 @@
+<%= stylesheet_link_tag 'session', media: 'all', 'data-turbolinks-track': 'reload' %>
+<main class="login-bg">
+        <!-- Register Area Start -->
+        <div class="register-form-area">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="register-form text-center mt-3">
+                            <!-- Login Heading -->
+                            <div class="register-heading">
+                                <span>ĐĂNG KÝ</span>
+                            </div>
+                            <!-- Single Input Fields -->
+                            <%= form_for @user do |f| %>
+                                <div class="input-box">
+                                    <div class="single-input-fields mb-2">
+                                        <label>Email</label>
+                                        <%= f.text_field :email, placeholder: "Nhập email"%>
+                                    </div>
+                                    <div class="single-input-fields mb-2">
+                                        <label>Tên người dùng</label>
+                                        <%= f.text_field :name, placeholder: "Nhập email"%>
+                                    </div>
+                                    <div class="single-input-fields mb-2  ">
+                                        <label>Mât khẩu</label>
+                                        <%= f.password_field :password, placeholder: "Nhâp mật khẩu của bạn"%>
+                                    </div>
+                                    <div class="single-input-fields">
+                                        <label>Nhập lại mật khẩu</label>
+                                        <%= f.password_field :password_confirmation, placeholder: "Nhâp mật khẩu của bạn"%>
+                                    </div>
+                                    <div class="login-footer mt-4">
+                                        <%= f.submit "Đăng ký", class: "submit-btn3" %>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div>HOẶC</div>
+                                    <div>
+                                    <%= link_to "", :class => "fb" do %>
+                                      <i class="fab fa-facebook-f"></i>
+                                    <% end %>
+                                    <%= link_to "", :class => "gg" do %>
+                                      <i class="fab fa-google"></i>
+                                    <% end %>
+                                    </div>
+                                </div>
+                                <p>Bạn đã có tài khoản? <%= link_to 'Đăng nhập', login_path %> ngay</p>
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Register Area End -->
+    </main>

@@ -1,0 +1,321 @@
+ <%= stylesheet_link_tag 'tour_detail', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div class="container">
+	<div>
+		<h1>Tour thám hiểm Động Phong Nha</h1>
+		<p class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span> | 99 đánh giá</span></p>
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+			<div id="demo" class="carousel slide carousel-thumbnails" data-ride="carousel" data-interval="3500">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+                    <%= image_tag ("PN/pn3"), :class => "carou" %>
+					</div>
+					<div class="carousel-item">
+                    <%= image_tag ("PN/pn1"), :class => "carou" %>
+					</div>
+					<div class="carousel-item">
+                    <%= image_tag ("PN/pn2"), :class => "carou" %>
+					</div>
+					<a href="#demo" class="carousel-control-prev" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a href="#demo" class="carousel-control-next" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+				</div>
+				<ol class="carousel-indicators">
+					<li data-target="#demo" data-slide-to="0" class="active"> 
+						<img class="d-block w-100" src="..\Image\PN\pn3.jpg" class="img-fluid">
+					</li>
+					<li data-target="#demo" data-slide-to="1">
+						<img class="d-block w-100" src="..\Image\PN\pn1.jpg" class="img-fluid">
+					</li>
+					<li data-target="#demo" data-slide-to="2">
+						<img class="d-block w-100" src="..\Image\PN\pn2.jpg" class="img-fluid">
+					</li>
+				</ol>
+			</div>
+			<div id="lichtrinh">
+				<p class="abc"><i class="fas fa-map"></i>Lịch trình</p>
+				<div>
+					<table class="tb">
+						<tr>
+							<td>Sáng</td>
+							<td><p>Xe và HDV đón Quý khách tại các Khách sạn ở thành phố Đồng Hới, các khách sạn ở khu vực Phong Nha, nhà ga, sân bay, bến xe Đồng Hới (Nhận phòng nghỉ ngơi miễn phí tại khách sạn công ty nếu đến sớm)</p></td>
+						</tr>
+						<tr>
+							<td>07:30</td>
+							<td>
+								<p>Khởi hành đến vườn quốc gia Phong Nha Kẻ Bàng.</p>
+								<p>Đến Phong Nha, Quý khách nhận trang thiết bị chuyên dụng và thay trang phục nhà thám hiểm, nghe phổ biến nội quy, những lưu ý về an toàn trước khi bắt đầu hành trình xuyên Sơn Hồ.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>09:00</td>
+							<td>
+								<p>Quý khách tham quan 1.2km đầu tiên ở Động Phong Nha, thuyền đưa quý khách vào sâu hơn bên trong động.</p>
+								<p>Chiêm ngưỡng dòng sông ngầm hùng vĩ, những thạch nhũ lung linh kỳ ảo, quan sát sự sống từ khu vực lối vào với tôm, cá, dơi... hết 1.2km, sau ánh đèn cuối cùng, vùng bóng tối chính thức xuất hiện.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>10:30</td>
+							<td>
+								<p>Khám phá vùng tối trung gian, Quý khách rời thuyền đi bộ vượt qua những tảng đá, những lối đi hẹp và thạch nhũ khổng lồ, giảm tốc độ di chuyển khi đi qua 100m đầu tiên để nhìn ngắm hình dáng các thạch nhũ hùng vĩ.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>11:00</td>
+							<td><p>Quý khách nghỉ ngơi dùng bữa trưa dân dã trong hang bên bờ suối.</p></td>
+						</tr>
+						<tr>
+							<td>12:00</td>
+							<td><p>Tiếp tục tiến vào sông ngầm, vượt qua những con suối nhỏ, bơi qua dòng sông ngầm đến bãi cát tuyệt đẹp, tận hưởng cảm giác bước chân trên cát êm mịn như nhung. Ngay tại đây, Quý khách sẽ được trải nghiệm tắm cát hang động, từ đây dòng nước trong sông ngầm mạnh hơn, hướng dẫn viên sẽ bố trí dây từ điềm này sang điểm khác của con sông để Quý khách băng qua sông. Bất ngờ vì có những điểm lòng hang đột nhiên như rộng ra, cao hơn, ánh sáng kết hợp với màn sương mờ ảo được tạo nên do nhiệt độ thấp, không gian đậm chất liêu trai. Đó chính là động Huyền Không.</p></td>
+						</tr>
+						<tr>
+							<td>13:30</td>
+							<td><p>Trao tặng chứng nhận “Chinh phục Xuyên Sơn hồ và Khám phá 4.500m động Phong Nha” thành công, như là minh chứng rõ nhất cho sức khỏe, lòng can đảm và sự kiên trì.</p></td>
+						</tr>
+						<tr>
+							<td>15:00</td>
+							<td><p>Quý khách quay trở về theo con đường cũ, tham quan hang By Ký, hang Tiên và Hang Cung Đình.</p></td>
+						</tr>
+						<tr>
+							<td>16:00</td>
+							<td><p>Thuyền đón quý khách trở về bến thuyền Phong Nha</p></td>
+						</tr>
+						<tr>
+							<td>16:30</td>
+							<td><p>Tạm biệt Phong Nha, Quý khách lên xe khởi hành về Đồng Hới.</p></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="dichvu">
+				<p class="abc"><i class="fas fa-paperclip"></i>Dịch vụ</p>
+				<div>
+					<span><b>Giá tour bao gồm:</b></span>
+					<ul>
+						<li>
+							Xe tham quan (xe 16 chỗ, 29 chỗ, 35 chỗ, 45 chỗ) tùy theo số lượng khách thực tế trên chuyến đi.
+						</li>
+						<li>
+							Khách sạn tiêu chuẩn đầy đủ tiện nghi 2 khách người lớn/ phòng. Nếu lẻ người thứ 3, đóng phụ phí phòng đơn hoặc ngủ ghép phòng 3 khách.
+						</li>
+						<li>
+							Ăn uống theo chương trình:
+							<ul>
+								<li>Ăn phụ: 2 bữa buffet sáng tại khách sạn.</li>
+								<li>Ăn chính: 5 bữa chính tiêu chuẩn 100.000 đồng/bữa.</li>
+							</ul>
+						</li>
+						<li>
+							Vé tham quan theo chương trình.
+						</li>
+						<li>
+							Hướng dẫn viên tiếng Việt vui vẻ nhiệt tình suốt chuyến đi.
+						</li>
+						<li>
+							Bảo hiểm với mức bồi thường tối đa 100.000.000 đồng/trường hợp.
+						</li>
+						<li>
+							Quà tặng: nón du lịch Việt, nước, khăn lạnh.
+						</li>
+					</ul>
+					<span><b>Không bao gồm:</b></span>
+					<ul>
+						<li>Bia hay nước ngọt trong các bữa ăn.</li>
+						<li>Tham quan ngoài chương trình.</li>
+						<li>Chi phí cá nhân: điện thoại, giặt ủi…</li>
+						<li>01 bữa trưa ngày 3 theo chương trình.</li>
+						<li>Thuế VAT.</li>
+					</ul>
+				</div>
+			</div>
+			<div id="ghichu">
+				<p class="abc"><i class="fas fa-sticky-note"></i>Ghi chú</p>
+				<span><i>Giờ bay có thể thay đổi theo quy định của hàng không. Xau Travel sẽ thay đổi chương trình cho phù hợp với giờ bay mới nhưng sẽ không chịu trách nhiệm về các khoản chi phí phát sinh.</i></span>
+				<br>
+				<span><b>Quy định thanh toán, hủy vé</b></span>
+				<ul>
+					<li>
+						Sau khi xác nhận và thanh toán (ít nhất 50% tiền cọc giữ chỗ và thanh toán đủ 100% tổng giá trị tiền tour trước 10 ngày khởi hành).
+					</li>
+					<li>
+						Khi đến ngày thanh toán đủ 100% tổng giá trị tiền tour, nếu Quý khách không thanh toán đúng hạn và đúng số tiền được xem như Quý khách tự ý huỷ tour và mất hết số tiền đã đặt cọc giữ chỗ.
+					</li>
+					<li>
+						Vé Máy Bay / vé xe lửa / vé tàu cao tốc được xuất ngay sau khi quý khách đóng tiền và có xác nhận sự chính xác về họ, tên (đúng từng ký tự ghi trong hộ chiếu hoặc CMND), ngày-tháng-năm sinh … của hành khách theo yêu cầu của hãng vận chuyển. Mọi sự thay đổi liên quan đến vé đã xuất: ngày giờ đi, tên hành khách, hủy vé, quý khách vui lòng chịu chi phí theo qui định sau:
+						<ul>
+							<li>
+								Ngay sau khi Quý khách đăng ký tour nếu hủy sẽ bị phạt tiền tour và vé máy bay
+							</li>
+							<li>
+								Ngay sau khi đặt cọc hoặc thanh toán hoặc trước 15 ngày: phí hủy 10% tiền tour+ 100% Vé máy bay.
+
+							</li>
+							Hủy 10 ngày trước ngày khởi hành: phí hủy 50% tiền tour + 100% vé máy bay.
+							<li>
+								Hủy 07 ngày trước ngày khởi hành: phí hủy 70% tiền tour  + 100% vé máy bay.
+							</li>
+							<li>
+								Hủy  05 ngày trước ngày khởi hành: phí hủy 100% tiền tour  + 100% vé máy bay.
+							</li>
+							<li>
+								Trường hợp quý khách đến trễ giờ khởi hành được tính là hủy 5 ngày trước ngày khởi hành.
+							</li>
+						</ul>
+					</li>
+					<li>
+						Việc huỷ bỏ chuyến đi phải được thông báo trực tiếp với Công ty hoặc qua fax, email, tin nhắn và phải được Công ty xác nhận. Việc huỷ bỏ bằng điện thoại không được chấp nhận.
+					</li>
+					<li>
+						Các ngày đặt cọc, thanh toán, huỷ và dời tour: không tính thứ 7, Chủ Nhật.
+					</li>
+					<li>
+						Trong những trường hợp bất khả kháng như: khủng bố, bạo động, thiên tai, lũ lụt… Tuỳ theo tình hình thực tế và sự thuận tiện, an toàn của khách hàng, công ty Du Lịch sẽ chủ động thông báo cho khách hàng sự thay đổi như sau: huỷ hoặc thay thế bằng một chương trình mới với chi phí tương đương chương trình tham quan trước đó. Trong trường hợp chương trình mới có phát sinh thì Khách hàng sẽ thanh toán khoản phát sinh này. Tuy nhiên, mỗi bên có trách nhiệm cố gắng tối đa, giúp đỡ bên bị thiệt hại nhằm giảm thiểu các tổn thất gây ra vì lý do bất khả kháng.…
+					</li>
+					<li>
+						Đối với sự thay đổi lịch trình, giờ bay do lỗi của hãng hàng không, tàu hoả, tàu thuỷ, Xau Travel sẽ không chịu trách nhiệm bất kỳ phát sinh nào do lỗi trên như: phát sinh bữa ăn, nhà hàng, khách sạn, phương tiện di chuyển, hướng dẫn viên, ….
+					</li>
+				</ul>
+				<span><b>Lưu ý</b></span>
+				<ul>
+					<li>
+						Khi đăng ký tour khách hàng bắt buộc phải gởi giấy tờ tùy thân cho đơn vị du lịch để vào tên xuất vé và mua bảo hiểm du lịch. Những giấy tờ cá nhân của khách hàng (CMND hoặc Passport) thuộc về trách nhiệm của khách hàng. Mọi vấn đề như hình ảnh, thông tin giấy tờ trong bản gốc bị mờ, không rõ ràng; Passport, CMND hết hạn,… không đúng quy định của pháp luật Việt Nam, Du Lịch Việt sẽ không chịu trách nhiệm và sẽ không hoàn trả bất cứ chi phí phát sinh nào
+					</li>
+					<li>
+						Đối với khách Nước ngoài/Việt Kiều: Khi đi tour phải mang theo đầy đủ Passport (Hộ Chiếu), Visa Việt Nam bản chính còn hạn sử dụng làm thủ tục lên máy bay theo qui định hàng không. 
+					</li>
+					<li>
+						Trẻ em (dưới 12 tuổi) khi đi du lịch mang theo giấy khai sinh (bản chính hoặc sao y có thị thực còn hạn sử dụng) để  làm thủ tục hàng không.
+					</li>
+					<li>
+						Quý khách từ 14 tuổi bắt buộc phải có CMND hoặc Passport (còn hạn sử dụng), KHÔNG SỬ DỤNG GIẤY KHAI SINH. Nếu trẻ em từ 14 tuổi chưa có CMND hoặc Passport bắt buộc phải có Giấy xác nhận nhân thân (Có xác nhận chính quyền (còn hạn sử dụng)) + Giấy khai sinh.
+					</li>
+					<li>
+						Một số thứ tự, chi tiết trong chương trình; giờ bay; giờ xe lửa; giờ tàu cao tốc có thể thay đổi để phù hợp với tình hình thực tế của chuyến đi (thời tiết, giao thông…)
+					</li>
+					<li>
+						Hành lý và tư trang du khách tự bảo quản trong quá trình du lịch .
+					</li>
+					<li>
+						Vì lý do sức khỏe và an toàn vệ sinh thực phẩm, Quý Khách vui lòng không mang thực phẩm từ bên ngoài vào nhà hàng, khách sạn. Đối với thức uống khi mang vào phải có sự đồng ý của nhà hàng, khách sạn và bị tính phí nếu có.
+					</li>
+				</ul>
+			</div>
+			<div id="comment">
+				<p class="abc"><i class="fas fa-comments"></i>Bình luận</p>
+			</div>
+		</div>
+		<div class="col-md-4">	
+			<table class="table table-hover border-bottom">
+				<tr>
+					<td>Thời gian</td>
+					<td>1 Ngày</td>
+				</tr>
+				<tr>
+					<td>Khởi hành</td>
+					<td>12/7/2020</td>
+				</tr>
+				<tr>
+					<td>Vận chuyển</td>
+					<td>Xe du lịch, máy bay</td>
+				</tr>
+			</table>
+			<div class="stick">
+				<div class="card">
+					<div class="p-3">
+						<div class="card-title">
+							<span>Giá: </span><span id="gia">1490000</span><span> VND </span><sup><strike>1690000đ</strike></sup>
+						</div>
+						<button id="datve" class="btn btn-success w-100">Đặt ngay</button>
+					</div>
+				</div>
+				<nav id="myScrollspy">
+					<ul class="nav nav-pills flex-column">
+						<li class="nav-item">
+							<a class="nav-link" href="#lichtrinh"><i class="fas fa-map"></i>Lịch trình</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#dichvu"><i class="fas fa-paperclip"></i> Dịch vụ</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#ghichu"><i class="fas fa-sticky-note"></i> Ghi chú</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#comment"><i class="fas fa-comments"></i>Bình luận</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="datve">
+			<div class="datve-content">
+				<div class="datve-header">
+					<span class="close">&times;</span>
+					<h2 class="text-center">Đặt vé</h2>
+				</div>
+				<div class="datve-main">
+					<div class="text-center">
+						<h3>Tour khám phá Quảng Bình</h3>
+						<table class="table table-hover border-bottom">
+							<tr>
+								<td>Thời gian</td>
+								<td>1 Ngày</td>
+							</tr>
+							<tr>
+								<td>Khởi hành</td>
+								<td>12/7/2020</td>
+							</tr>
+							<tr>
+								<td>Vận chuyển</td>
+								<td>Xe du lịch, máy bay</td>
+							</tr>
+						</table>
+					</div>
+					<div class="text-center">
+						<h3>Thông tin liên hệ</h3>
+					</div>
+					<form>
+						<div class="form-group">
+							<label for="name">Họ và tên:</label>
+							<input type="text" class="form-control" id="name">
+						</div>
+						<div class="form-group">
+							<label for="email">Email:</label>
+							<input type="email" class="form-control" id="email">
+						</div>
+						<div class="form-group">
+							<label for="phone">Số điện thoại:</label>
+							<input type="text" class="form-control" id="phone">
+						</div>
+						<div class="form-group">
+							<label for="address">Địa chỉ:</label>
+							<input type="text" class="form-control" id="address">
+						</div>
+						<div class="form-group">
+							<label for="note">Ghi chú:</label>
+							<input type="text" class="form-control" id="note">
+						</div>
+						<div style="margin-top: 20px">
+							<label>Số người: </label>
+							<input onchange="money()" type="number" min="1" max="5" id="peo">
+							<div class="float-right">
+								<label>Tổng tiền: </label>
+								<label id="lbm"></label>
+								<label>VND</label>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="datve-footer">
+					<div class="justify-content-center d-flex">
+						<button id="huy" class="btn btn-secondary">Hủy</button>
+						<button id="dat" class="btn btn-success">Đặt vé</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

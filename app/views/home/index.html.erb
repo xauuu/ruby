@@ -1,0 +1,388 @@
+<%= stylesheet_link_tag 'main' %>
+<header>
+	<div id="demo" class="carousel slide" data-ride="carousel" data-interval="1700">
+		<ol class="carousel-indicators">
+			<li data-target="#demo" data-slide-to="0" class="active"></li>
+			<li data-target="#demo" data-slide-to="1"></li>
+			<li data-target="#demo" data-slide-to="2"></li>
+			<li data-target="#demo" data-slide-to="3"></li>
+			<li data-target="#demo" data-slide-to="4"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active">
+				<%= image_tag ("Travel/Banner4.jpg"), :class => "carou" %>
+			</div>
+			<div class="carousel-item">
+				<%= image_tag ("Travel/Banner3.jpg"), :class => "carou" %>
+			</div>
+			<div class="carousel-item">
+				<%= image_tag ("Travel/Banner2.jpg"), :class => "carou" %>
+			</div>
+			<div class="carousel-item">
+				<%= image_tag ("Travel/Carousel1.jpg"), :class => "carou" %>
+			</div>
+			<div class="carousel-item">
+				<%= image_tag ("Travel/Carousel3.jpg"), :class => "carou" %>
+			</div>
+			<a href="#demo" class="carousel-control-prev" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a href="#demo" class="carousel-control-next" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+	</div>
+</header>
+<div class="container-fluid">
+	<div id="review">
+		<div class="col-md-12 text-center text-justify">
+			<h2>Welcome to Xau Travel</h2><hr class="hr4">
+			<p class="font">Xau Travel cung cấp cho bạn những dịch vụ du lịch tốt nhất và hấp dẫn nhất Việt Nam</p>
+		</div>
+		<div class="row text-center">
+			<div class="col-md-3 wow bounceInLeft">
+				<div class="card mb-4">
+					<div class="card-img-top"><%= image_tag ("Logo/place.png") %></div>
+					<div class="card-body">Những địa điểm du lịch nổi tiếng</div>
+				</div>
+			</div>
+			<div class="col-md-3 wow bounceInDown">
+				<div class="card mb-4">
+					<div class="card-img-top"><%= image_tag ("Logo/tour.png") %></div>
+					<div class="card-body">Những tour du lịch giá rẻ hấp dẫn</div>					
+				</div>
+			</div>
+			<div class="col-md-3 wow bounceInDown">
+				<div class="card mb-4">
+					<div class="card-img-top"><%= image_tag ("Logo/car.png")%></div>
+					<div class="card-body">Dịch vụ cho thuê xe du lịch giá rẻ, uy tín</div>
+				</div>
+			</div>
+			<div class="col-md-3 wow bounceInRight">
+				<div class="card mb-4">
+					<div class="card-img-top"><%= image_tag ("Logo/supp.png")%></div>
+					<div class="card-body">Hỗ trợ khách hàng tận tình, nhanh chóng</div>
+				</div>
+			</div>
+			<div class="mx-auto d-block wow bounceInUp" data-wow-delay="0.1s">
+				<%= image_tag ("Travel/mapvn.png")%>
+			</div>
+		</div>
+	</div>
+    <div class="popular_destination_area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb_70">
+                        <h3>Điểm đến yêu thích</h3>
+                        <p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_destination">
+                        <div class="thumb">
+                            <%= image_tag ("Place/vlh.jpg") %>
+                        </div>
+                        <div class="content">
+                            <p class="d-flex align-items-center">Quảng Bình <a href="travel_destination.html">  07 Places</a> </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_destination">
+                        <div class="thumb">
+                            <%= image_tag ("Place/vlh.jpg") %>
+                        </div>
+                        <div class="content">
+                            <p class="d-flex align-items-center">Vịnh Hạ Long <a href="travel_destination.html">  03 Places</a> </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_destination">
+                        <div class="thumb">
+                            <%= image_tag ("Place/dan.jpg") %>
+                        </div>
+                        <div class="content">
+                            <p class="d-flex align-items-center">Đà Nẵng <a href="travel_destination.html">  10 Places</a> </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_destination">
+                        <div class="thumb">
+                           <%= image_tag ("Place/quin.jpg") %>
+                        </div>
+                        <div class="content">
+                            <p class="d-flex align-items-center">Quy Nhơn <a href="travel_destination.html">  02 Places</a> </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_destination">
+                        <div class="thumb">
+                            <%= image_tag ("Place/quin.jpg") %>
+                        </div>
+                        <div class="content">
+                            <p class="d-flex align-items-center">Maldives <a href="travel_destination.html">  02 Places</a> </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_destination">
+                        <div class="thumb">
+                           <%= image_tag ("Place/quin.jpg") %>
+                        </div>
+                        <div class="content">
+                            <p class="d-flex align-items-center">Indonesia <a href="travel_destination.html">  05 Places</a> </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="popular_places_area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb_70">
+                        <h3>Tour du lịch HOT</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_place">
+                        <div class="thumb">
+							<%= image_tag ("Tour/Tour1.jpg") %>
+                            <p class="prise">1.490.000 VND</p>
+                        </div>
+                        <div class="place_info">
+                            <%= link_to(tour_detail_path) do %>
+                                <h3>Phong Nha - Kẻ Bàng</h3>
+                            <% end %>
+                            <p>United State of America</p>
+                            <div class="rating_days d-flex justify-content-between">
+                                <span class="d-flex justify-content-center align-items-center">
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i>
+                                     <a href="#">(20 Review)</a>
+                                </span>
+                                <div class="days">
+                                    <i class="far fa-clock"></i>
+                                    <a href="#">5 Days</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_place">
+                        <div class="thumb">
+                            <%= image_tag ("Tour/Tour2.jpg") %>
+                            <p class="prise">1.000.000 VND</p>
+                        </div>
+                        <div class="place_info">
+                            <a href="destination_details.html"><h3>Korola Megna</h3></a>
+                            <p>United State of America</p>
+                            <div class="rating_days d-flex justify-content-between">
+                                <span class="d-flex justify-content-center align-items-center">
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i>
+                                     <a href="#">(20 Review)</a>
+                                </span>
+                                <div class="days">
+                                    <i class="far fa-clock"></i>
+                                    <a href="#">5 Days</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_place">
+                        <div class="thumb">
+                            <%= image_tag ("Tour/Tour3.jpg") %>
+                            <p class="prise">1.000.000 VND</p>
+                        </div>
+                        <div class="place_info">
+                            <a href="destination_details.html"><h3>London</h3></a>
+                            <p>United State of America</p>
+                            <div class="rating_days d-flex justify-content-between">
+                                <span class="d-flex justify-content-center align-items-center">
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i>
+                                     <a href="#">(20 Review)</a>
+                                </span>
+                                <div class="days">
+                                    <i class="far fa-clock"></i>
+                                    <a href="#">5 Days</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_place">
+                        <div class="thumb">
+                            <%= image_tag ("Tour/Tour4.jpg") %>
+                            <p class="prise">1.000.000 VND</p>
+                        </div>
+                        <div class="place_info">
+                            <a href="destination_details.html"><h3>Miami Beach</h3></a>
+                            <p>United State of America</p>
+                            <div class="rating_days d-flex justify-content-between">
+                                <span class="d-flex justify-content-center align-items-center">
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i>
+                                     <a href="#">(20 Review)</a>
+                                </span>
+                                <div class="days">
+                                    <i class="far fa-clock"></i>
+                                    <a href="#">5 Days</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_place">
+                        <div class="thumb">
+                           <%= image_tag ("Tour/Tour6.jpg") %>
+                            <p class="prise">1.000.000 VND</p>
+                        </div>
+                        <div class="place_info">
+                            <a href="destination_details.html"><h3>California</h3></a>
+                            <p>United State of America</p>
+                            <div class="rating_days d-flex justify-content-between">
+                                <span class="d-flex justify-content-center align-items-center">
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i>
+                                     <a href="#">(20 Review)</a>
+                                </span>
+                                <div class="days">
+                                    <i class="far fa-clock"></i>
+                                    <a href="#">5 Days</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_place">
+                        <div class="thumb">
+                            <%= image_tag ("Tour/Tour5.jpg") %>
+                            <p class="prise">1.000.000 VND</p>
+                        </div>
+                        <div class="place_info">
+                            <a href="destination_details.html"><h3>Saintmartine Iceland</h3></a>
+                            <p>United State of America</p>
+                            <div class="rating_days d-flex justify-content-between">
+                                <span class="d-flex justify-content-center align-items-center">
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i> 
+                                     <i class="fa fa-star"></i>
+                                     <a href="#">(20 Review)</a>
+                                </span>
+                                <div class="days">
+                                    <i class="far fa-clock"></i>
+                                    <a href="#">5 Days</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="more_place_btn text-center">
+                        <a class="boxed-btn4" href="#">More Places</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="recent_trip_area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb_70">
+                        <h3>Tin tức du lịch</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_trip">
+                        <div class="thumb">
+                            <%= image_tag 'TinTuc/tt1' %>
+                        </div>
+                        <div class="info">
+                            <div class="date">
+                                <span>Oct 12, 2019</span>
+                            </div>
+                            <a href="#">
+                                <h3>Tin tức 1</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_trip">
+                        <div class="thumb">
+                            <%= image_tag 'TinTuc/tt2' %>
+                        </div>
+                        <div class="info">
+                            <div class="date">
+                                <span>Oct 12, 2019</span>
+                            </div>
+                            <a href="#">
+                                <h3>Tin tức 2</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_trip">
+                        <div class="thumb">
+                            <%= image_tag 'TinTuc/tt1' %>
+                        </div>
+                        <div class="info">
+                            <div class="date">
+                                <span>Oct 12, 2019</span>
+                            </div>
+                            <a href="#">
+                                <h3>Tin tức 3</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
