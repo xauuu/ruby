@@ -26,5 +26,14 @@
         </div>
     </div>
 </div>
-<%= javascript_pack_tag 'admin' %>
+<script>
+    ClassicEditor
+    .create(document.querySelector('#note'))
+    .then(editor => {
+        console.log(editor);
+    })
+    .catch(error => {
+        console.error(error);
+    });
+</script>
         

@@ -479,7 +479,7 @@ body {
 }
 
 /* line 349, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_header.scss */
-.header-area .seach_icon a svg {
+.header-area .seach_icon a i {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -661,51 +661,7 @@ tr:hover:before{
 .social_icon li {
   display: inline;
   font-size: 50px;
-  margin-right: 40px;
-}
-.a:after {
-  content: "Facebook";
-  position: absolute;
-  bottom: 13px;
-  left: 62px;
-  background-color: blue;
-}
-.b:after {
-  content: "Youtube";
-  position: absolute;
-  bottom: 13px;
-  left: 154px;
-  background-color: #f31111;
-}
-.c:after {
-  content: "Instagram";
-  position: absolute;
-  bottom: 13px;
-  left: 237px;
-  background-image: linear-gradient(45deg, #e39c45, #cc0f90);
-}
-.d:after {
-  content: "Twitter";
-  position: absolute;
-  bottom: 13px;
-  left: 333px;
-  background-color: #4993fa;
-}
-.a:after,
-.b:after,
-.c:after,
-.d:after {
-  font-size: 12px;
-  padding: 0 5px;
-  color: white;
-  border-radius: 10px;
-  display: none;
-}
-.a:hover:after,
-.c:hover:after,
-.b:hover:after,
-.d:hover:after {
-  display: inline;
+  margin-right: 30px;
 }
 .input-group {
   margin-top: 36px;

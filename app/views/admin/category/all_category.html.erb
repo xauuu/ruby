@@ -1,3 +1,4 @@
+<h2>Danh mục</h2>
 <% flash.each do |key, value| %>
     <div class="row">
         <div class="col">
@@ -11,7 +12,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h2 class="card-title text-lg">Danh sách danh mục</h2>
+                <%= link_to 'Thêm danh mục', add_category_path, :class => 'btn btn-outline-secondary' %>
 
                 <div class="card-tools">
                     <div class="input-group input-group-sm" style="width: 150px;">
@@ -43,10 +44,10 @@
                             <td><%= category.name %></td>
                             <td><%= raw(category.desc) %></td>
                             <td>
-                                <%=link_to delete_category_path(:category_id => category.id), :class=> 'btn btn-warning' do %>
+                                <%=link_to delete_category_path(:category_id => category.id), :class=> 'btn btn-outline-warning' do %>
                                     <i class="fas fa-trash-alt"></i>
                                 <% end %>
-                                <%=link_to edit_category_path(:category_id => category.id), :class=> 'btn btn-primary' do %>
+                                <%=link_to edit_category_path(:category_id => category.id), :class=> 'btn btn-outline-primary' do %>
                                     <i class="fas fa-edit"></i>
                                 <% end %>
                             </td>

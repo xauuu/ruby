@@ -1,0 +1,72 @@
+<h2>Tour du lịch</h2>
+<% flash.each do |key, value| %>
+    <div class="row">
+        <div class="col">
+            <div class="alert alert-<%= key %>">
+                <%= value %>
+            </div>
+        </div>
+    </div>
+<% end %>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <%= link_to 'Thêm tour du lịch', add_tour_path, :class => 'btn btn-outline-secondary' %>
+
+                <div class="card-tools">
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-default">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên Tour</th>
+                            <th>Hình ảnh</th>
+                            <th>Mô tả</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <% @tour.each do |tour| -%>
+                     <tr>
+                            <td><%= tour.id %></td>
+                            <td><%= tour.name %></td>
+                            <td><%= image_tag(tour.img.url, alt: 'Image', style: "width:150px") if tour.img? %></td>
+                            <td><%= raw(tour.desc) %></td>
+                            <td>
+                                <%=link_to delete_tour_path(:tour_id => tour.id), :class=> 'btn btn-outline-warning' do %>
+                                    <i class="fas fa-trash-alt"></i>
+                                <% end %>
+                                <%=link_to edit_tour_path(:tour_id => tour.id), :class=> 'btn btn-outline-primary' do %>
+                                    <i class="fas fa-edit"></i>
+                                <% end %>
+                            </td>
+                        </tr>
+                    <% end %>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+</div>
+<script>
+    window.setTimeout(function() {
+        $(".alert").fadeTo(500, 0).slideUp(500, function() {
+            $(this).remove();
+        });
+    }, 2500);
+</script>
