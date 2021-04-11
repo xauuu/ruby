@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_29_100512) do
+ActiveRecord::Schema.define(version: 2021_04_11_015612) do
 
   create_table "blog_categories", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_03_29_100512) do
   end
 
   create_table "blogs", charset: "utf8mb4", force: :cascade do |t|
-    t.bigint "blog_categories_id", null: false
+    t.bigint "blog_category_id", null: false
     t.string "title"
     t.string "img"
     t.string "date"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2021_03_29_100512) do
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["blog_categories_id"], name: "index_blogs_on_blog_categories_id"
+    t.index ["blog_category_id"], name: "index_blogs_on_blog_category_id"
   end
 
   create_table "categories", charset: "utf8mb4", force: :cascade do |t|
@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 2021_03_29_100512) do
   end
 
   create_table "tours", charset: "utf8mb4", force: :cascade do |t|
-    t.bigint "categories_id", null: false
     t.string "name"
     t.string "img"
     t.string "desc"
@@ -48,7 +47,8 @@ ActiveRecord::Schema.define(version: 2021_03_29_100512) do
     t.integer "day"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["categories_id"], name: "index_tours_on_categories_id"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_tours_on_category_id"
   end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
@@ -59,6 +59,6 @@ ActiveRecord::Schema.define(version: 2021_03_29_100512) do
     t.string "email"
   end
 
-  add_foreign_key "blogs", "blog_categories", column: "blog_categories_id"
-  add_foreign_key "tours", "categories", column: "categories_id"
+  add_foreign_key "blogs", "blog_categories"
+  add_foreign_key "tours", "categories"
 end

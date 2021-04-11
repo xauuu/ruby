@@ -72,24 +72,25 @@
                 </div>
                 <div class="col-lg-9">
                     <div class="search_wrap">
-                        <form class="search_form" action="#">
+                        <%= form_for :tours,:html => { :class =>'search_form' } do |f| %>
                             <div class="input_field">
-                                <input type="text" placeholder="Địa điểm?">
+                                <%= f.text_field :name, required: 'required', placeholder: "Địa điểm?"%>
                             </div>
                             <div class="input_field">
-                                <input id='date' type='date'>
+                                <%= f.date_field :date, id: 'date'%>
                             </div>
                             <div class="input_field">
-                                <select>
+                            <%= f.collection_select( :category_id, @category, :id, :name, {:prompt=>true })%>
+                                <%# <select>
                                     <option data-display="Travel type">Travel type</option>
                                     <option value="1">Some option</option>
                                     <option value="2">Another option</option>
-                                </select>
+                                </select> %>
                             </div>
                             <div class="search_btn">
                                 <button class="boxed-btn4 " type="submit" >Tìm</button>
                             </div>
-                        </form>
+                        <% end %>
                     </div>
                 </div>
             </div>

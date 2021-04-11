@@ -33,6 +33,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Tên Tour</th>
+                            <th>Danh mục</th>
                             <th>Hình ảnh</th>
                             <th>Mô tả</th>
                             <th>Thao tác</th>
@@ -43,6 +44,7 @@
                      <tr>
                             <td><%= tour.id %></td>
                             <td><%= tour.name %></td>
+                            <td><%= tour.category.name %></td>
                             <td><%= image_tag(tour.img.url, alt: 'Image', style: "width:150px") if tour.img? %></td>
                             <td><%= raw(tour.desc) %></td>
                             <td>

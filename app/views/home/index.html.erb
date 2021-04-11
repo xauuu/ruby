@@ -159,164 +159,39 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_place">
-                        <div class="thumb">
-							<%= image_tag ("Tour/Tour1.jpg") %>
-                            <p class="prise">1.490.000 VND</p>
-                        </div>
-                        <div class="place_info">
-                            <%= link_to(tour_detail_path) do %>
-                                <h3>Phong Nha - Kẻ Bàng</h3>
-                            <% end %>
-                            <p>United State of America</p>
-                            <div class="rating_days d-flex justify-content-between">
-                                <span class="d-flex justify-content-center align-items-center">
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i>
-                                     <a href="#">(20 Review)</a>
-                                </span>
-                                <div class="days">
-                                    <i class="far fa-clock"></i>
-                                    <a href="#">5 Days</a>
+                
+                <% @tour.each do |item| %>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single_place">
+                            <div class="thumb">
+                                <%= image_tag (item.img.url) if item.img? %>
+                                <p class="prise"><%= number_to_currency(item.price, unit: "", precision: 0) %> VND</p>
+                            </div>
+                            <div class="place_info">
+                                <%= link_to tour_detail_path(:tour_id => item.id) do %>
+                                    <h3><%= item.name %></h3>
+                                <% end %>
+                                <p><%= item.category.name %></p>
+                                <div class="rating_days d-flex justify-content-between">
+                                    <span class="d-flex justify-content-center align-items-center">
+                                      <% for a in 1..item.rating %>
+                                        <i class="fa fa-star"></i>
+                                      <% end %>
+                                      <% for a in 1..(5-item.rating) %>
+                                        <i class="fa fa-star-o"></i>
+                                      <% end %>
+                                        <a href="#">(20 Review)</a>
+                                    </span>
+                                    <div class="days">
+                                        <i class="far fa-clock"></i>
+                                        <a href="#"><%= item.day %> Ngày</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_place">
-                        <div class="thumb">
-                            <%= image_tag ("Tour/Tour2.jpg") %>
-                            <p class="prise">1.000.000 VND</p>
-                        </div>
-                        <div class="place_info">
-                            <a href="destination_details.html"><h3>Korola Megna</h3></a>
-                            <p>United State of America</p>
-                            <div class="rating_days d-flex justify-content-between">
-                                <span class="d-flex justify-content-center align-items-center">
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i>
-                                     <a href="#">(20 Review)</a>
-                                </span>
-                                <div class="days">
-                                    <i class="far fa-clock"></i>
-                                    <a href="#">5 Days</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_place">
-                        <div class="thumb">
-                            <%= image_tag ("Tour/Tour3.jpg") %>
-                            <p class="prise">1.000.000 VND</p>
-                        </div>
-                        <div class="place_info">
-                            <a href="destination_details.html"><h3>London</h3></a>
-                            <p>United State of America</p>
-                            <div class="rating_days d-flex justify-content-between">
-                                <span class="d-flex justify-content-center align-items-center">
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i>
-                                     <a href="#">(20 Review)</a>
-                                </span>
-                                <div class="days">
-                                    <i class="far fa-clock"></i>
-                                    <a href="#">5 Days</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_place">
-                        <div class="thumb">
-                            <%= image_tag ("Tour/Tour4.jpg") %>
-                            <p class="prise">1.000.000 VND</p>
-                        </div>
-                        <div class="place_info">
-                            <a href="destination_details.html"><h3>Miami Beach</h3></a>
-                            <p>United State of America</p>
-                            <div class="rating_days d-flex justify-content-between">
-                                <span class="d-flex justify-content-center align-items-center">
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i>
-                                     <a href="#">(20 Review)</a>
-                                </span>
-                                <div class="days">
-                                    <i class="far fa-clock"></i>
-                                    <a href="#">5 Days</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_place">
-                        <div class="thumb">
-                           <%= image_tag ("Tour/Tour6.jpg") %>
-                            <p class="prise">1.000.000 VND</p>
-                        </div>
-                        <div class="place_info">
-                            <a href="destination_details.html"><h3>California</h3></a>
-                            <p>United State of America</p>
-                            <div class="rating_days d-flex justify-content-between">
-                                <span class="d-flex justify-content-center align-items-center">
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i>
-                                     <a href="#">(20 Review)</a>
-                                </span>
-                                <div class="days">
-                                    <i class="far fa-clock"></i>
-                                    <a href="#">5 Days</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_place">
-                        <div class="thumb">
-                            <%= image_tag ("Tour/Tour5.jpg") %>
-                            <p class="prise">1.000.000 VND</p>
-                        </div>
-                        <div class="place_info">
-                            <a href="destination_details.html"><h3>Saintmartine Iceland</h3></a>
-                            <p>United State of America</p>
-                            <div class="rating_days d-flex justify-content-between">
-                                <span class="d-flex justify-content-center align-items-center">
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i>
-                                     <a href="#">(20 Review)</a>
-                                </span>
-                                <div class="days">
-                                    <i class="far fa-clock"></i>
-                                    <a href="#">5 Days</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <% end %>
+
             </div>
             <div class="row">
                 <div class="col-lg-12">

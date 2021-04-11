@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   def index
     @user = User.find_by id: session[:user_id]
+    @category = Category.all
+    @tour = Tour.take(6)
   end
   def tour_detail
     @user = User.find_by id: session[:user_id]

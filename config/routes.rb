@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    get 'tour/add_tour'
-  end
   scope 'admin' do
     get 'dashboard', to: 'admin#index'
     # category
@@ -18,8 +15,8 @@ Rails.application.routes.draw do
     get 'delete-tour', to: 'admin/tour#delete_tour'
     get 'edit-tour', to: 'admin/tour#edit_tour'
     post 'update-tour', to: 'admin/tour#update_tour'
+  end
 
-end
   root    "home#index"
   get     "home"          => "home#index"
   get     "login"         => "session#new"

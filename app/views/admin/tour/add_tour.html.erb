@@ -14,7 +14,7 @@
                     </div>
                     <div class="form-group">
                         <label>Danh mục</label>
-                        <%=f.collection_select( :categories_id, @category, :id, :name, {:prompt=>true}, {:class=>'form-control', :required=>true}) %>
+                        <%=f.collection_select( :category_id, @category, :id, :name, {:prompt=>true}, {:class=>'form-control', :required=>true}) %>
                     </div>
                     <div class="form-group">
                         <label>Ảnh</label>

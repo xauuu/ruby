@@ -12,7 +12,7 @@ class Admin::CategoryController < ApplicationController
     end
   end
   def all_category
-    @category = Category.all
+    @pagy, @category = pagy(Category.all, items:1)
   end
   def delete_category
     @cate = Category.find(params[:category_id])
