@@ -15,6 +15,9 @@ Rails.application.routes.draw do
     get 'delete-tour', to: 'admin/tour#delete_tour'
     get 'edit-tour', to: 'admin/tour#edit_tour'
     post 'update-tour', to: 'admin/tour#update_tour'
+    post 'add-gallery', to: 'admin/tour#add_gallery'
+    get 'all-gallery', to: 'admin/tour#all_gallery'
+    get 'delete-gallery', to: 'admin/tour#delete_gallery'
   end
 
   root    "home#index"

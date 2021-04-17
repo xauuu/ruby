@@ -582,6 +582,295 @@ ul {
 }
 
 // blog
+.single-post-area .blog_details {
+  box-shadow: none;
+  padding: 0;
+}
+
+/* line 1054, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .social-links {
+  padding-top: 10px;
+}
+
+/* line 1057, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .social-links li {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* line 1061, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .social-links li a {
+  color: #cccccc;
+  padding: 7px;
+  font-size: 14px;
+  transition: all 0.2s linear;
+}
+
+/* line 1074, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .blog_details {
+  padding-top: 26px;
+}
+
+/* line 1077, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .blog_details p {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* line 1087, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .quote-wrapper {
+  background: rgba(130, 139, 178, 0.1);
+  padding: 15px;
+  line-height: 1.733;
+  color: #888888;
+  font-style: italic;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  /* line 1087, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+  .single-post-area .quote-wrapper {
+    padding: 30px;
+  }
+}
+
+/* line 1101, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .quotes {
+  background: #fff;
+  padding: 15px 15px 15px 20px;
+  border-left: 2px solid;
+}
+
+@media (min-width: 768px) {
+  /* line 1101, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+  .single-post-area .quotes {
+    padding: 25px 25px 25px 30px;
+  }
+}
+
+/* line 1111, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .arrow {
+  position: absolute;
+}
+
+/* line 1114, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .arrow .lnr {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* line 1121, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .thumb .overlay-bg {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* line 1126, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-top {
+  padding-top: 15px;
+  border-top: 1px solid #f0e9ff;
+}
+
+/* line 1130, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-top p {
+  margin-bottom: 0;
+}
+
+/* line 1134, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-top .like-info {
+  font-size: 14px;
+}
+
+/* line 1137, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-top .like-info i,
+.single-post-area .navigation-top .like-info span {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+/* line 1144, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-top .comment-count {
+  font-size: 14px;
+}
+
+/* line 1147, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-top .comment-count i,
+.single-post-area .navigation-top .comment-count span {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+/* line 1156, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-top .social-icons li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+/* line 1160, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-top .social-icons li:last-child {
+  margin: 0;
+}
+
+/* line 1164, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-top .social-icons li i,
+.single-post-area .navigation-top .social-icons li span {
+  font-size: 14px;
+  color: #999999;
+}
+
+/* line 1182, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .blog-author {
+  padding: 40px 30px;
+  background: #fbf9ff;
+  margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+  /* line 1182, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+  .single-post-area .blog-author {
+    padding: 20px 8px;
+  }
+}
+
+/* line 1191, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .blog-author img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+@media (max-width: 600px) {
+  /* line 1191, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+  .single-post-area .blog-author img {
+    margin-right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* line 1204, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .blog-author a {
+  display: inline-block;
+}
+
+/* line 1208, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .blog-author a:hover {
+  color: #FF4A52;
+}
+
+/* line 1213, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .blog-author p {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+/* line 1218, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .blog-author h4 {
+  font-size: 16px;
+}
+
+/* line 1225, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-area {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 30px;
+  margin-top: 55px;
+}
+
+/* line 1230, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-area p {
+  margin-bottom: 0px;
+}
+
+/* line 1234, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-area h4 {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+/* line 1240, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-area .nav-left {
+  text-align: left;
+}
+
+/* line 1243, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-area .nav-left .thumb {
+  margin-right: 20px;
+  background: #000;
+}
+
+/* line 1247, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-area .nav-left .thumb img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* line 1252, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-area .nav-left .lnr {
+  margin-left: 20px;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* line 1259, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-area .nav-left:hover .lnr {
+  opacity: 1;
+}
+
+/* line 1264, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-area .nav-left:hover .thumb img {
+  opacity: .5;
+}
+
+@media (max-width: 767px) {
+  /* line 1240, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+  .single-post-area .navigation-area .nav-left {
+    margin-bottom: 30px;
+  }
+}
+
+/* line 1275, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-area .nav-right {
+  text-align: right;
+}
+
+/* line 1278, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-area .nav-right .thumb {
+  margin-left: 20px;
+  background: #000;
+}
+
+/* line 1282, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-area .nav-right .thumb img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* line 1287, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-area .nav-right .lnr {
+  margin-right: 20px;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* line 1294, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-area .nav-right:hover .lnr {
+  opacity: 1;
+}
+
+/* line 1299, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.single-post-area .navigation-area .nav-right:hover .thumb img {
+  opacity: .5;
+}
+
+@media (max-width: 991px) {
+  /* line 1307, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+  .single-post-area .sidebar-widgets {
+    padding-bottom: 0px;
+  }
+}
 .blog_right_sidebar .widget_title {
   font-size: 20px;
   margin-bottom: 40px;

@@ -35,7 +35,7 @@
                             <th>Tên Tour</th>
                             <th>Danh mục</th>
                             <th>Hình ảnh</th>
-                            <th>Mô tả</th>
+                            <th>Gallery</th>
                             <th>Thao tác</th>
                         </tr>
                     </thead>
@@ -46,7 +46,11 @@
                             <td><%= tour.name %></td>
                             <td><%= tour.category.name %></td>
                             <td><%= image_tag(tour.img.url, alt: 'Image', style: "width:150px") if tour.img? %></td>
-                            <td><%= raw(tour.desc) %></td>
+                            <td>
+                                <%=link_to all_gallery_path(:tour_id => tour.id), :class=> 'btn btn-outline-info' do %>
+                                    <i class="fas fa-images"></i>
+                                <% end %>
+                            </td>
                             <td>
                                 <%=link_to delete_tour_path(:tour_id => tour.id), :class=> 'btn btn-outline-warning' do %>
                                     <i class="fas fa-trash-alt"></i>
