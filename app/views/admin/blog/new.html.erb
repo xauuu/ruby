@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-md-8">
+    <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Thêm tin tức du lịch</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <%= form_for :blog, url: add_blog_path do |f| %>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Tiêu đề</label>
+                        <%= f.text_field :title, class: 'form-control', required: 'required', placeholder: ""%>
+                    </div>
+                    <div class="form-group">
+                        <label>Danh mục tin tức</label>
+                        <%=f.collection_select( :blog_category_id, @blog_category, :id, :name, {:prompt=>true}, {:class=>'form-control', :required=>true}) %>
+                    </div>
+                    <div class="form-group">
+                        <label>Ảnh</label>
+                        <%= f.file_field :img, accept: "image/*", class: 'form-control', required: 'required' %>
+                    </div>
+                    <div class="form-group">
+                        <label>Mô tả</label>
+                        <%= f.text_area :desc, :id => "note" %>
+                    </div>
+                    <div class="form-group">
+                        <label>Nội dung</label>
+                        <%= f.text_area :content, :id => "note1" %>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                    <%= f.submit "Thêm tour du lịch", class: "btn btn-primary" %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
+<script>
+    ClassicEditor
+    .create(document.querySelector('#note'))
+    .then(editor => {
+        console.log(editor);
+    })
+    .catch(error => {
+        console.error(error);
+    });
+    ClassicEditor
+    .create(document.querySelector('#note1'))
+    .then(editor => {
+        console.log(editor);
+    })
+    .catch(error => {
+        console.error(error);
+    });
+</script>
+        

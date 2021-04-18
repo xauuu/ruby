@@ -18,6 +18,20 @@ Rails.application.routes.draw do
     post 'add-gallery', to: 'admin/tour#add_gallery'
     get 'all-gallery', to: 'admin/tour#all_gallery'
     get 'delete-gallery', to: 'admin/tour#delete_gallery'
+    # blog-category
+    get 'add-blog-category', to: 'admin/blog_category#new'
+    post 'add-blog-category', to: 'admin/blog_category#save'
+    get 'all-blog-category', to: 'admin/blog_category#index'
+    get 'delete-blog-category', to: 'admin/blog_category#delete'
+    get 'edit-blog-category', to: 'admin/blog_category#edit'
+    post 'update-blog-category', to: 'admin/blog_category#update'
+    # blog
+    get 'add-blog', to: 'admin/blog#new'
+    post 'add-blog', to: 'admin/blog#save'
+    get 'all-blog', to: 'admin/blog#index'
+    get 'delete-blog', to: 'admin/blog#delete'
+    get 'edit-blog', to: 'admin/blog#edit'
+    post 'update-blog', to: 'admin/blog#update'
   end
 
   root    "home#index"

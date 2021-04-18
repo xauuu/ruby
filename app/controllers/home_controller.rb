@@ -12,10 +12,13 @@ class HomeController < ApplicationController
   def blog
     @category = Category.all
     @user = User.find_by id: session[:user_id]
+    @blog_category = BlogCategory.all
+    @blog = Blog.all
   end
   def blog_detail
     @category = Category.all
     @user = User.find_by id: session[:user_id]
+    @blog = Blog.find(params[:blog_id])
   end
   def tour
     @category = Category.all
