@@ -33,6 +33,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Tiêu đề</th>
+                            <th>Lượt xem</th>
                             <th>Ngày thêm</th>
                             <th>Hình ảnh</th>
                             <th>Thao tác</th>
@@ -42,7 +43,8 @@
                     <% @blog.each do |item| -%>
                      <tr>
                             <td><%= item.id %></td>
-                            <td><%= item.title %></td>
+                            <td><%= item.title %></td>                       
+                            <td><%= item.view %></td>
                             <td><%= item.updated_at.strftime("%d tháng %m, %Y") %></td>
                             <td><%= image_tag(item.img.url, style: "width:150px") if item.img? %></td>
                             <td>

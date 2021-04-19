@@ -74,43 +74,20 @@
                         </aside>
 
                         <aside class="single_sidebar_widget popular_post_widget">
-                            <h3 class="widget_title">Bài viết gần đây</h3>
-                            <div class="media post_item">
-                                <%= image_tag 'TinTuc/tt1' %>
+                            <h3 class="widget_title">Bài viết xem nhiều</h3>
+                            
+                            <% @blog_view.each do |item| %>
+                                <div class="media post_item">
+                                <%= image_tag item.img.url%>
                                 <div class="media-body">
                                     <a href="single-blog.html">
-                                        <h3>From life was you fish...</h3>
+                                        <h3><%= item.title%></h3>
                                     </a>
-                                    <p>January 12, 2019</p>
+                                    <p><%= item.updated_at.strftime("%d tháng %m, %Y")%></p>
                                 </div>
                             </div>
-                            <div class="media post_item">
-                                <%= image_tag 'TinTuc/tt1' %>
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>The Amazing Hubble</h3>
-                                    </a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <%= image_tag 'TinTuc/tt1' %>
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Astronomy Or Astrology</h3>
-                                    </a>
-                                    <p>03 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <%= image_tag 'TinTuc/tt1' %>
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Asteroids telescope</h3>
-                                    </a>
-                                    <p>01 Hours ago</p>
-                                </div>
-                            </div>
+                            <% end %>
+                            
                         </aside>
                     </div>
                 </div>

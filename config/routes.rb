@@ -21,14 +21,14 @@ Rails.application.routes.draw do
     # blog-category
     get 'add-blog-category', to: 'admin/blog_category#new'
     post 'add-blog-category', to: 'admin/blog_category#save'
-    get 'all-blog-category', to: 'admin/blog_category#index'
+    get 'all-blog-category', to: 'admin/blog_category#show'
     get 'delete-blog-category', to: 'admin/blog_category#delete'
     get 'edit-blog-category', to: 'admin/blog_category#edit'
     post 'update-blog-category', to: 'admin/blog_category#update'
     # blog
     get 'add-blog', to: 'admin/blog#new'
     post 'add-blog', to: 'admin/blog#save'
-    get 'all-blog', to: 'admin/blog#index'
+    get 'all-blog', to: 'admin/blog#show'
     get 'delete-blog', to: 'admin/blog#delete'
     get 'edit-blog', to: 'admin/blog#edit'
     post 'update-blog', to: 'admin/blog#update'

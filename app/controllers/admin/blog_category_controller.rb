@@ -1,6 +1,6 @@
 class Admin::BlogCategoryController < ApplicationController
     layout 'admin'
-    def index
+    def show
         @blog_category = BlogCategory.all
     end
 

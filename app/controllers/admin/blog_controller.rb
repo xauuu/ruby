@@ -1,6 +1,6 @@
 class Admin::BlogController < ApplicationController
     layout 'admin'
-    def index
+    def show
         @blog = Blog.all
     end
 
