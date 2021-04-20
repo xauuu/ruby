@@ -1,24 +1,9 @@
-# README
+# Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Nhóm 15: Trần Quang Đạt - Đặng Quang Tài - Phan Trung Thắng
 
-Things you may want to cover:
 
-* Ruby version
+* Export database: mysqldump -u root -p xau_development > ruby.sql
+* Import database: mysql -u [username] -p [db_name] < ruby.sql
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
