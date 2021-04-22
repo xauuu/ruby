@@ -76,9 +76,9 @@
                             <div class="input_field">
                                 <%= f.text_field :name, required: 'required', placeholder: "Địa điểm?"%>
                             </div>
-                            <div class="input_field">
-                                <%= f.date_field :date, id: 'date'%>
-                            </div>
+                            <%# <div class="input_field"> %>
+                                <%# <%= f.date_field :date, id: 'date'%> 
+                            <%# </div> %>
                             <div class="input_field">
                             <%= f.collection_select( :category_id, @category, :id, :name, {:prompt=>true })%>
                                 <%# <select>

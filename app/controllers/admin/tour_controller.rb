@@ -1,10 +1,10 @@
 class Admin::TourController < ApplicationController
   layout 'admin'
-  def add_tour
+  def new
     @category = Category.all
   end
 
-  def save_tour
+  def save
     @tour = Tour.new tour_params
     if @tour.save
       redirect_to all_tour_path
@@ -13,27 +13,27 @@ class Admin::TourController < ApplicationController
     end
   end
 
-  def all_tour
+  def show
     @tour =Tour.all
   end
 
-  def delete_tour
+  def delete
     @tour = Tour.find(params[:tour_id])
     if @tour.destroy
       flash[:success] = "Xoá tour thành công"
       redirect_to all_tour_path
     else
       flash[:error] = "Xoá tour thất bại"
-      render :all_tour
+      redirect_to all_tour_path
     end
   end
 
-  def edit_tour
+  def edit
     @category = Category.all
     @tour = Tour.find(params[:tour_id])
   end
 
-  def update_tour
+  def update
     @tour = Tour.find(params[:tour_id])
     if @tour.update(tour_params)
       flash[:success] = "Cập nhật tour thành công"

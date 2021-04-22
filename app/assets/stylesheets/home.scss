@@ -610,7 +610,122 @@ body {
   font-size: 30px;
   color: #184b9b;
 }
+// about
+/* ƯHY */
+.why{
+	/* margin-top: 50px; */
+	background: #f1f1f1;
+    padding-top: 20px;
+}
+.bg-w{
+	margin-top: -75px;
+    position: relative;
+    top: 29px;
+}
+.bg-w img{
+	width: 320px;
+	height: 400px;
+}
+.whytxt {
+    position: absolute;
+    top: 160px;
+    left: 106px;
+}
+.whytxt p{
+	margin-bottom: 0;
+	font-size: 18px;
+}
+.web{
+	font-size: 30px !important;
+	color: #ff0000;
+	font-weight: 500
+}
+.col-lg-8 hr{
+	border-top: 1px dashed;
+	width: 60%;
+    margin: 10px 0;
+}
+.w-num{
+	font-size: 32px;
+	color: red;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+.w-name{
+	font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.w-des{
+	font-size: 14px;
+}
+.mg-bot5{
+	margin-bottom: 0px;
+}
+/* ///////////////// */
+.head{
+	background-image: linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)), url('Travel/Carousel14.jpg');
+	background-size: cover;
+	background-position: center;
+	/* height: 60vh; */
+	color: #fff;
+	padding-bottom: 70px;
+}
+.about{
+    font-family: 'Kreon', serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+.ab{
+	padding: 0 100px;
+	font-size: 18px;
+}
+#ttt{
+	padding-top: 100px;
+}
+.tht {
+	color: #F5F5F5;
+	background: linear-gradient(
+		-45deg,
+		#EF5350 0 calc(50% - 10px),
+		#F5F5F5 calc(50% - 10px) calc(50% + 10px),
+		#B71C1C calc(50% + 10px) 100%
+		);
+	background-size: 250% 100%;
+	background-position: 100% 50%;
+	
+	transition: 0.5s all;
+}
 
+.tht:hover,
+.tht:focus {
+  background-position: 0% 50%;
+  transition: 0.3s all;
+  color: #F5F5F5;
+}
+.col-md-7 {
+    overflow: hidden;
+}
+.col-md-7 img{
+	width: 100%;
+	height: 88%;
+}
+.abx{
+	position: absolute;
+	z-index: 1;
+	background-color: #fff;
+	left: -63px;
+    top: 50px;
+    padding: 49px;
+}
+.abx span{
+	font-weight: 630;
+    color: #6c1212;
+    text-transform: uppercase;
+    border-bottom: solid 2px;
+    text-shadow: 2px 2px 2px #4187be;
+}
 /* -------------------FOOTER-------------- */
 footer {
   margin-top: 30px;
