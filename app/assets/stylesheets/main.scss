@@ -349,7 +349,7 @@ ul {
 }
 /* line 1, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
 .popular_places_area {
-  padding-top: 142px;
+  padding-top: 80px;
   background: #f7fafd;
 }
 
@@ -1312,4 +1312,59 @@ ul {
   display: block;
   clear: both;
   display: table;
+}
+
+.blog_right_sidebar .single_sidebar_tour .widget_title {
+  font-size: 20px;
+  margin-bottom: 10px!important;
+}
+
+/* line 652, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.blog_right_sidebar .widget_title::after {
+  content: "";
+  display: block;
+  padding-top: 15px;
+  border-bottom: 1px solid #f0e9ff;
+}
+.blog_right_sidebar .single_sidebar_tour {
+  background: #ffffff;
+  padding: 30px;
+  margin-bottom: 10px;
+}
+.blog_right_sidebar .tour_cate .cat-list li {
+  border-bottom: 1px solid #f0e9ff;
+  transition: all 0.3s ease 0s;
+  padding-bottom: 12px;
+}
+
+/* line 760, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.blog_right_sidebar .tour_cate .cat-list li:last-child {
+  border-bottom: 0;
+}
+
+/* line 764, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.blog_right_sidebar .tour_cate .cat-list li a {
+  font-size: 14px;
+  line-height: 20px;
+  color: #888888;
+}
+
+/* line 769, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.blog_right_sidebar .tour_cate .cat-list li a p {
+  margin-bottom: 0px;
+}
+.blog_right_sidebar .tour_cate .cat-list li a:hover {
+  color: #ff4a52;
+}
+
+/* line 774, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_blog.scss */
+.blog_right_sidebar .tour_cate .cat-list li + li {
+  padding-top: 15px;
+}
+.blog_right_sidebar .tour_cate .cat-list {
+  padding-left: 0px;
+}
+.blog_right_sidebar .tour_cate .star {
+  font-size: 13px!important;
+  color: #fdae5c!important;
 }

@@ -1,48 +1,66 @@
 <div class="popular_places_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="filter_result_wrap">
-                        <div class="blog_right_sidebar">
-                            <aside class="single_sidebar_widget post_category_widget">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="filter_result_wrap">
+                    <div class="blog_right_sidebar">
+                        <aside class="single_sidebar_tour tour_cate">
                             <h4 class="widget_title">Danh mục tour</h4>
-                                <ul class="list cat-list">
+                            <ul class="list cat-list">
+
                                 <% @category.each do |item| %>
-                                    <li>
-                                        <%= link_to tour_path(:category_id => item.id), :class => 'd-flex' do %>
-                                            <p><%= item.name%></p>    
-                                        <% end %> 
-                                    </li>
+                                <li>
+                                    <%= link_to tour_path(:category_id => item.id), :class => 'd-flex' do %>
+                                        <p><%= item.name%></p>    
+                                    <% end %> 
+                                </li>
                                 <% end %>
                                 
-                                </ul>
-                            </aside>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="row">
-                        
-                        <% @tour.each do |item| %>
-                            <div class="col-lg-6 col-md-6">
-                        <div class="single_place">
-                            <div class="thumb">
-                                <%= image_tag (item.img.url) if item.img? %>
-                                <p class="prise"><%= number_to_currency(item.price, unit: "", precision: 0) %> VND</p>
-                            </div>
-                            <div class="place_info">
-                                <%= link_to tour_detail_path(:tour_id => item.id) do %>
-                                    <h3><%= item.name %></h3>
-                                <% end %>
-                                <p><%= item.category.name %></p>
-                                <div class="rating_days d-flex justify-content-between">
-                                    <span class="d-flex justify-content-center align-items-center">
-                                      <% for a in 1..item.rating %>
+                            </ul>
+                        </aside>
+                        <aside class="single_sidebar_tour tour_cate">
+                            <h4 class="widget_title">Đánh giá</h4>
+                            <ul class="list cat-list">
+                               
+                              <% (1..5).each do |i| %>
+                              <li>
+                                <%= link_to tour_path(:rating => i), :class => 'star' do %>
+                                    <% (1..i).each do |j| %>
                                         <i class="fa fa-star"></i>
-                                      <% end %>
-                                      <% for a in 1..(5-item.rating) %>
-                                        <i class="fa fa-star-o"></i>
-                                      <% end %>
+                                    <% end %>
+                                <% end %> 
+                            </li>
+                            <% end %>
+                            
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="row">
+
+                <% if !@tour.blank? %>
+                    <% @tour.each do |item| %>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="single_place">
+                                <div class="thumb">
+                                    <%= image_tag (item.img.url) if item.img? %>
+                                    <p class="prise"><%= number_to_currency(item.price, unit: "", precision: 0) %> VND</p>
+                                </div>
+                                <div class="place_info">
+                                    <%= link_to tour_detail_path(:tour_id => item.id) do %>
+                                        <h3><%= item.name %></h3>
+                                    <% end %>
+                                    <p><%= item.category.name %></p>
+                                    <div class="rating_days d-flex justify-content-between">
+                                        <span class="d-flex justify-content-center align-items-center">
+                                        <% for a in 1..item.rating %>
+                                            <i class="fa fa-star"></i>
+                                        <% end %>
+                                        <% for a in 1..(5-item.rating) %>
+                                            <i class="fa fa-star-o"></i>
+                                        <% end %>
                                         <a href="#">(20 Review)</a>
                                     </span>
                                     <div class="days">
@@ -53,17 +71,28 @@
                             </div>
                         </div>
                     </div>
-                        <% end %>
-                        
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="float-right">
-                                <%== pagy_bootstrap_nav(@pagy) %>
-                            </div>
+                    <% end %>
+                <% else %>
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <h4>Không tìm thấy tour phù hợp</h4>
                         </div>
                     </div>
-                        </div>
-                    </div>
+                <% end %>
+                
+            
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="float-right">
+                
+                <% if !@tour.blank? %>
+                    <%== pagy_bootstrap_nav(@pagy) %>
+                <% end %>
+                    
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+</div>

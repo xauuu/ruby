@@ -1,12 +1,12 @@
 <h2>Danh sách tài khoản</h2>
 <% flash.each do |key, value| %>
-    <div class="row">
-        <div class="col">
-            <div class="alert alert-<%= key %>">
-                <%= value %>
-            </div>
+<div class="row">
+    <div class="col">
+        <div class="alert alert-<%= key %>">
+            <%= value %>
         </div>
     </div>
+</div>
 <% end %>
 <div class="row">
     <div class="col-12">
@@ -37,19 +37,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <% @user.each do |item| -%>
-                     <tr>
+                        <% @user.each do |item| -%>
+                        <tr>
                             <td><%= item.id %></td>
                             <td><%= item.name %></td>
                             <td><%= item.email %></td>
                             <td>
                                 <%=link_to all_user_path, :class=> 'btn btn-outline-warning' do %>
-                                    <i class="fas fa-trash-alt"></i>
+                                <i class="fas fa-trash-alt"></i>
                                 <% end %>
                             </td>
                         </tr>
-                    <% end %>
-                       
+                        <% end %>
+                        
                     </tbody>
                 </table>
             </div>

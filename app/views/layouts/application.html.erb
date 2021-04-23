@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Xau</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -8,78 +8,78 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
+<body>
   <header>
-        <div class="header-area ">
-            <div id="sticky-header" class="main-header-area">
-                <div class="container-fluid">
-                    <div class="header_bottom_border">
-                        <div class="row align-items-center">
-                            <div class="col-xl-2 col-lg-2">
-                                <div class="logo">
-                                    <%= link_to(home_path) do %>
-                                        <%= image_tag 'Logo/logo' %>
-                                    <% end %>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="main-menu  d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><%= link_to 'Trang chủ', home_path %></li>
-                                            <li><%= link_to 'Tour du lịch', tour_path %></li>
-                                            <li><%= link_to 'Tin tức', blog_path %></li>
-                                            <li><%= link_to 'About', about_path %></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 d-none d-lg-block">
-                                <div class="social_wrap d-flex align-items-center justify-content-end">
-                                    <div class="sign">
-                                        <% if session[:user_id] %>
-                                            <%= @user.name %> / <%= link_to "Logout", logout_path%> 
-                                        <% else %>
-                                            <%= link_to "Login", "/login" %> or <%= link_to "Register", "/users/new" %>
-                                        <% end %>			
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="seach_icon">
-                                <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </div>
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
+    <div class="header-area ">
+        <div id="sticky-header" class="main-header-area">
+            <div class="container-fluid">
+                <div class="header_bottom_border">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <%= link_to(home_path) do %>
+                                <%= image_tag 'Logo/logo' %>
+                                <% end %>
                             </div>
                         </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li class="<%= @home_active%>"><%= link_to 'Trang chủ', home_path %></li>
+                                        <li class="<%= @tour_active%>"><%= link_to 'Tour du lịch', tour_path %></li>
+                                        <li class="<%= @blog_active%>"><%= link_to 'Tin tức', blog_path %></li>
+                                        <li class="<%= @about_active%>"><%= link_to 'About', about_path %></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+                            <div class="social_wrap d-flex align-items-center justify-content-end">
+                                <div class="sign">
+                                    <% if session[:user_id] %>
+                                    <%= @user.name %> / <%= link_to "Logout", logout_path%> 
+                                    <% else %>
+                                    <%= link_to "Login", "/login" %> or <%= link_to "Register", "/users/new" %>
+                                    <% end %>			
+                                </div>
+                            </div>
+                        </div>
+                        <div class="seach_icon">
+                            <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
                     </div>
-
                 </div>
+
             </div>
         </div>
-    </header>
-    <div class="where_togo_area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-3">
-                    <div class="form_area">
-                        <h3>Bạn muốn đi đâu?</h3>
-                    </div>
+    </div>
+</header>
+<div class="where_togo_area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-3">
+                <div class="form_area">
+                    <h3>Bạn muốn đi đâu?</h3>
                 </div>
-                <div class="col-lg-9">
-                    <div class="search_wrap">
-                        <%= form_for :tours,:html => { :class =>'search_form' } do |f| %>
-                            <div class="input_field">
-                                <%= f.text_field :name, required: 'required', placeholder: "Địa điểm?"%>
-                            </div>
-                            <%# <div class="input_field"> %>
-                                <%# <%= f.date_field :date, id: 'date'%> 
-                            <%# </div> %>
-                            <div class="input_field">
+            </div>
+            <div class="col-lg-9">
+                <div class="search_wrap">
+                    <%= form_for :tours,:html => { :class =>'search_form' } do |f| %>
+                    <div class="input_field">
+                        <%= f.text_field :name, required: 'required', placeholder: "Địa điểm?"%>
+                    </div>
+                    <%# <div class="input_field"> %>
+                        <%# <%= f.date_field :date, id: 'date'%> 
+                        <%# </div> %>
+                        <div class="input_field">
                             <%= f.collection_select( :category_id, @category, :id, :name, {:prompt=>true })%>
                                 <%# <select>
                                     <option data-display="Travel type">Travel type</option>
@@ -90,65 +90,65 @@
                             <div class="search_btn">
                                 <button class="boxed-btn4 " type="submit" >Tìm</button>
                             </div>
-                        <% end %>
+                            <% end %>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <%= yield %>
-    <footer>
-	<div class="row pt-4 pb-4">
-		<div class="col-md-4">			
-			<div>
-				<p>Liên hệ với tôi</p>
-				<table class="add d-flex justify-content-center">
-					<tr>
-						<td><i class="fas fa-map-marker-alt"></i></td>
-						<td>Ngũ Hành Sơn, Đà Nẵng</td>
-					</tr>
-					<tr>
-						<td><i class="fas fa-envelope"></i></td>
-						<td>qdatqb@gmail.com</td>
-					</tr>
-					<tr>
-						<td><i class="fas fa-phone"></i></td>
-						<td>0886381845</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="text-center">
-				<p>Theo dõi tôi</p>
-				<ul class="social_icon">
-					<li class="a"><a href="https://www.facebook.com/qdat.qb"><i class="fab fa-facebook-square"></i></a></li>
-					<li class="b"><a href="https://www.youtube.com/channel/UCcmPY-ckluHNL5S0wfRUX0g?view_as=subscriber"><i class="fab fa-youtube-square"></i></a></li>
-					<li class="c"><a href="https://www.instagram.com/_xxau_/"><i class="fab fa-instagram"></i></a></li>
-					<li class="d"><a href="https://twitter.com/Quangt26058661"><i class="fab fa-twitter-square"></i></a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div>
-				<p class="text-center">Đăng kí để nhận thông báo</p>
-				<form>
-					<div class="input-group pr-4 pl-4">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-envelope"></i></span>
-						</div>
-						<input type="text" class="form-control" placeholder="Email">
-						<div class="input-group-append">
-							<button class="btn btn-secondary">Gửi</button>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+        <%= yield %>
+        <footer>
+           <div class="row pt-4 pb-4">
+              <div class="col-md-4">			
+                 <div>
+                    <p>Liên hệ với tôi</p>
+                    <table class="add d-flex justify-content-center">
+                       <tr>
+                          <td><i class="fas fa-map-marker-alt"></i></td>
+                          <td>Ngũ Hành Sơn, Đà Nẵng</td>
+                      </tr>
+                      <tr>
+                          <td><i class="fas fa-envelope"></i></td>
+                          <td>qdatqb@gmail.com</td>
+                      </tr>
+                      <tr>
+                          <td><i class="fas fa-phone"></i></td>
+                          <td>0886381845</td>
+                      </tr>
+                  </table>
+              </div>
+          </div>
+          <div class="col-md-4">
+             <div class="text-center">
+                <p>Theo dõi tôi</p>
+                <ul class="social_icon">
+                   <li class="a"><a href="https://www.facebook.com/qdat.qb"><i class="fab fa-facebook-square"></i></a></li>
+                   <li class="b"><a href="https://www.youtube.com/channel/UCcmPY-ckluHNL5S0wfRUX0g?view_as=subscriber"><i class="fab fa-youtube-square"></i></a></li>
+                   <li class="c"><a href="https://www.instagram.com/_xxau_/"><i class="fab fa-instagram"></i></a></li>
+                   <li class="d"><a href="https://twitter.com/Quangt26058661"><i class="fab fa-twitter-square"></i></a></li>
+               </ul>
+           </div>
+       </div>
+       <div class="col-md-4">
+         <div>
+            <p class="text-center">Đăng kí để nhận thông báo</p>
+            <form>
+               <div class="input-group pr-4 pl-4">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                 </div>
+                 <input type="text" class="form-control" placeholder="Email">
+                 <div class="input-group-append">
+                     <button class="btn btn-secondary">Gửi</button>
+                 </div>
+             </div>
+         </form>
+     </div>
+ </div>
+</div>
 </footer>
 <div class="text-center copy">Copyright &copy 2020 by Xấu | Design by Xấu</div>
-    <%= javascript_pack_tag 'main', 'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'main', 'data-turbolinks-track': 'reload' %>
 
-  </body>
+</body>
 </html>

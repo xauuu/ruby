@@ -1,12 +1,12 @@
 <h2>Danh mục tin tức</h2>
 <% flash.each do |key, value| %>
-    <div class="row">
-        <div class="col">
-            <div class="alert alert-<%= key %>">
-                <%= value %>
-            </div>
+<div class="row">
+    <div class="col">
+        <div class="alert alert-<%= key %>">
+            <%= value %>
         </div>
     </div>
+</div>
 <% end %>
 <div class="row">
     <div class="col-12">
@@ -38,22 +38,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <% @blog_category.each do |item| -%>
-                     <tr>
+                        <% @blog_category.each do |item| -%>
+                        <tr>
                             <td><%= item.id %></td>
                             <td><%= item.name %></td>
                             <td><%= raw(item.desc) %></td>
                             <td>
                                 <%=link_to delete_blog_category_path(:id => item.id), :class=> 'btn btn-outline-warning' do %>
-                                    <i class="fas fa-trash-alt"></i>
+                                <i class="fas fa-trash-alt"></i>
                                 <% end %>
                                 <%=link_to edit_blog_category_path(:id => item.id), :class=> 'btn btn-outline-primary' do %>
-                                    <i class="fas fa-edit"></i>
+                                <i class="fas fa-edit"></i>
                                 <% end %>
                             </td>
                         </tr>
-                    <% end %>
-                       
+                        <% end %>
+                        
                     </tbody>
                 </table>
             </div>
@@ -62,7 +62,7 @@
         <!-- /.card -->
     </div>
     <div class="col-12">
-       
+     
     </div>
 </div>
 <script>

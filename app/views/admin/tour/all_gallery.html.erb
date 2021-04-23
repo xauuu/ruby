@@ -1,12 +1,12 @@
 <h2>Thư viện ảnh</h2>
 <% flash.each do |key, value| %>
-    <div class="row">
-        <div class="col">
-            <div class="alert alert-<%= key %>">
-                <%= value %>
-            </div>
+<div class="row">
+    <div class="col">
+        <div class="alert alert-<%= key %>">
+            <%= value %>
         </div>
     </div>
+</div>
 <% end %>
 <div class="row">
     <div class="col-12">
@@ -14,71 +14,71 @@
             <div class="card-header">
                 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-lg">
                   Thêm hình ảnh
-                </button>
+              </button>
 
-                <div class="card-tools">
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+              <div class="card-tools">
+                <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
 
-                        <div class="input-group-append">
-                            <button type="submit" class="btn btn-default">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-default">
+                            <i class="fas fa-search"></i>
+                        </button>
                     </div>
                 </div>
             </div>
-            <!-- /.card-header -->
-            <% @gallery.each do |gallery| -%>
-            <div class="card-body">
-                <div class="row">
-                    
-                    <% gallery.img.each do |item| %>
-                        <div class="col-md-3">
-                            <%= image_tag(item.url) if item %>
-                        </div>
-                    <% end %>
-                        
-                </div>
-            </div>
-            <div class="card-footer text-center">
-                <%= link_to 'Xoá ảnh', delete_gallery_path(:gallery_id => gallery.id), :class => 'btn btn-outline-warning' %>
-            </div>
-            <% end %>
-            <!-- /.card-body -->
         </div>
-        <!-- /.card -->
+        <!-- /.card-header -->
+        <% @gallery.each do |gallery| -%>
+        <div class="card-body">
+            <div class="row">
+                
+                <% gallery.img.each do |item| %>
+                <div class="col-md-3">
+                    <%= image_tag(item.url) if item %>
+                </div>
+                <% end %>
+                
+            </div>
+        </div>
+        <div class="card-footer text-center">
+            <%= link_to 'Xoá ảnh', delete_gallery_path(:gallery_id => gallery.id), :class => 'btn btn-outline-warning' %>
+        </div>
+        <% end %>
+        <!-- /.card-body -->
     </div>
+    <!-- /.card -->
+</div>
 </div>
 <div class="modal fade" id="modal-lg">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Thêm hình ảnh</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Thêm hình ảnh</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <%= form_for :gallery, url: add_gallery_path, html: {multipart: true} do |f| %>
+        <div class="card-body">
+            <%= f.hidden_field :tour_id,:value => params[:tour_id] %>  
+            <div class="form-group">
+                <label>Ảnh</label>
+                <%= f.file_field :img, multiple: true, accept: "image/*", class: 'form-control', required: 'required' %>
             </div>
-            <div class="modal-body">
-                <%= form_for :gallery, url: add_gallery_path, html: {multipart: true} do |f| %>
-                    <div class="card-body">
-                        <%= f.hidden_field :tour_id,:value => params[:tour_id] %>  
-                        <div class="form-group">
-                            <label>Ảnh</label>
-                            <%= f.file_field :img, multiple: true, accept: "image/*", class: 'form-control', required: 'required' %>
-                        </div>
-                    <%= f.submit "Thêm ảnh", class: "btn btn-primary" %>
-                    </div>
-                <% end %>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
+            <%= f.submit "Thêm ảnh", class: "btn btn-primary" %>
         </div>
-        <!-- /.modal-dialog -->
-      </div>
+        <% end %>
+    </div>
+    <div class="modal-footer justify-content-between">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+</div>
+<!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->
+</div>
 <script>
     window.setTimeout(function() {
         $(".alert").fadeTo(500, 0).slideUp(500, function() {

@@ -1,12 +1,12 @@
 <h2>Danh mục</h2>
 <% flash.each do |key, value| %>
-    <div class="row">
-        <div class="col">
-            <div class="alert alert-<%= key %>">
-                <%= value %>
-            </div>
+<div class="row">
+    <div class="col">
+        <div class="alert alert-<%= key %>">
+            <%= value %>
         </div>
     </div>
+</div>
 <% end %>
 <div class="row">
     <div class="col-12">
@@ -38,22 +38,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <% @category.each do |category| -%>
-                     <tr>
+                        <% @category.each do |category| -%>
+                        <tr>
                             <td><%= category.id %></td>
                             <td><%= category.name %></td>
                             <td><%= raw(category.desc) %></td>
                             <td>
                                 <%=link_to delete_category_path(:category_id => category.id), :class=> 'btn btn-outline-warning' do %>
-                                    <i class="fas fa-trash-alt"></i>
+                                <i class="fas fa-trash-alt"></i>
                                 <% end %>
                                 <%=link_to edit_category_path(:category_id => category.id), :class=> 'btn btn-outline-primary' do %>
-                                    <i class="fas fa-edit"></i>
+                                <i class="fas fa-edit"></i>
                                 <% end %>
                             </td>
                         </tr>
-                    <% end %>
-                       
+                        <% end %>
+                        
                     </tbody>
                 </table>
             </div>

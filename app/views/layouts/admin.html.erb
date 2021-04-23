@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> XAU | Admin</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title> XAU | Admin</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/27.0.0/classic/ckeditor.js"></script>
-    <%= javascript_pack_tag 'admin', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <script src="https://cdn.ckeditor.com/ckeditor5/27.0.0/classic/ckeditor.js"></script>
+  <%= javascript_pack_tag 'admin', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body data-scrollbar-auto-hide="n" class="hold-transition sidebar-mini layout-fixed">
-      <div class="wrapper">
-        <%= render "base/header" %>
-        <%= render "base/sidebar" %>
+<body data-scrollbar-auto-hide="n" class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    <%= render "base/header" %>
+    <%= render "base/sidebar" %>
 
-        <div class="content-wrapper">
-          <div class="content-header">
-            <div class="container-fluid">
-            </div><!-- /.container-fluid -->
-          </div>
+    <div class="content-wrapper">
+      <div class="content-header">
+        <div class="container-fluid">
+        </div><!-- /.container-fluid -->
+      </div>
 
-          <div class="content container-fluid">
-            <div class="container-fluid">
-              <%= yield %>
-            </div>
-          </div>
+      <div class="content container-fluid">
+        <div class="container-fluid">
+          <%= yield %>
         </div>
+      </div>
+    </div>
 
-        <%= render "base/footer" %>
-        <%= render "base/control_sidebar" %>
-      <div>
-  </body>
-</html>
+    <%= render "base/footer" %>
+    <%= render "base/control_sidebar" %>
+    <div>
+    </body>
+    </html>
