@@ -3,7 +3,7 @@
 Nhóm 15: Trần Quang Đạt - Đặng Quang Tài - Phan Trung Thắng
 
 ## Cài đặt  
-``` javascript
+``` bash
   git clone https://github.com/xauuu/ruby.git
   bundle install
   sudo service mysql start
