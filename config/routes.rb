@@ -46,5 +46,8 @@ Rails.application.routes.draw do
   get     "blog"          => "home#blog"
   get     "blog-detail"   => "home#blog_detail"
   get     "tour"          => "home#tour"
-  get     "about"          => "home#about"
+  get     "about"         => "home#about"
+  post    "order"         => "home#order"
+  post    "search"        => "home#search"
+  post    "blog-search"   => "home#blog_search"
 end

@@ -14,47 +14,52 @@
 	<div class="row" id="tintuc">
 		<div class="col-md-8">
         
-        <% @blog.each do |item| %>
+        <% if !@blog.blank? %>
+            <% @blog.each do |item| %>
             
-			<div class="row mb-4">
-				<div class="col-md-4">
-                    <%= link_to  blog_detail_path(:blog_id => item.id)  do %>
-                        <%= image_tag(item.img.url, :class => 'img-tt') if item.img? %>
-                    <% end %>
-				</div>
-				<div class="col-md-8">
-					<div class="tt-title">
-						<%= link_to blog_detail_path(:blog_id => item.id) do %>
-                            <%= item.title%>
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <%= link_to  blog_detail_path(:blog_id => item.id)  do %>
+                            <%= image_tag(item.img.url, :class => 'img-tt') if item.img? %>
                         <% end %>
-					</div>
-					<div><i class="fas fa-calendar-alt"></i>Ngày đăng: <%= item.updated_at.strftime("%d tháng %m, %Y")%></div>
-					<hr>
-					<div class="tt-body">
-						<%= raw(item.desc)%>
-					</div>
-				</div>
-			</div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tt-title">
+                            <%= link_to blog_detail_path(:blog_id => item.id) do %>
+                                <%= item.title%>
+                            <% end %>
+                        </div>
+                        <div><i class="fas fa-calendar-alt"></i>Ngày đăng: <%= item.updated_at.strftime("%d tháng %m, %Y")%></div>
+                        <hr>
+                        <div class="tt-body">
+                            <%= raw(item.desc)%>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        <% else %>
+            <div class="col-lg-12">
+                <div class="text-center">
+                    <h4>Không tìm thấy bài viết</h4>
+                </div>
+            </div>
         <% end %>
         
 		</div>
         <div class="col-lg-4">
                     <div class="blog_right_sidebar">
                         <aside class="single_sidebar_widget search_widget">
-                            <form action="#">
-                                <div class="form-group">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder='Tìm kiếm tin tức'
-                                            onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = 'Search Keyword'">
-                                        <div class="input-group-append">
-                                            <button class="btn" type="button"><i class="ti-search"></i></button>
-                                        </div>
+                        <%= form_for :search, url: blog_search_path do |f| %>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <%= f.text_field :key, class: 'form-control', required: 'required', placeholder: "Tìm kiếm tin tức"%>
+                                    <div class="input-group-append">
+                                        <button class="btn" type="button"><i class="fa fa-search"></i></button>
                                     </div>
                                 </div>
-                                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                    type="submit">Tìm kiếm</button>
-                            </form>
+                            </div>
+                            <%= f.submit "Tìm kiếm", class: "button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" %>
+                        <%end%>
                         </aside>
 
                         <aside class="single_sidebar_widget post_category_widget">

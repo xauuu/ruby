@@ -66,7 +66,37 @@
                         
                     </div>
                     <div class="tab-pane fade" id="datve">
-                    
+                        <%= form_for :order, url: order_path do |f| %>
+                            <div class="card-body">
+                                <%=f.hidden_field :user_id, value: session[:user_id] %>
+                                <%=f.hidden_field :tour_id, value: @tour.id %>      
+                                <div class="form-group">
+                                    <label>Họ tên</label>
+                                    <%= f.text_field :name, class: 'form-control', required: 'required', placeholder: ""%>
+                                </div>
+                                <div class="form-group">
+                                    <label>Số điện thoại</label>
+                                    <%= f.text_field :phone, class: 'form-control', required: 'required', placeholder: ""%>
+                                </div>
+                                <div class="form-group">
+                                    <label>Địa chỉ</label>
+                                    <%= f.text_field :address, class: 'form-control', required: 'required', placeholder: ""%>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <%= f.text_field :day, class: 'form-control', required: 'required', placeholder: ""%>
+                                </div>
+                                <div class="form-group">
+                                    <label>Ghi chú</label>
+                                    <%= f.text_area :note, class: 'form-control', required: 'required', placeholder: ""%>
+                                </div>
+                                <div class="form-group text-center">
+                                <%= f.submit "Đặt tour", class: "btn btn-primary" %>
+                                </div>
+                                
+                            </div>
+                                
+                        <% end %>
                     </div>
                 </div>
             </div>

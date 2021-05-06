@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_19_102402) do
+ActiveRecord::Schema.define(version: 2021_05_06_133221) do
 
   create_table "blog_categories", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
@@ -47,6 +47,20 @@ ActiveRecord::Schema.define(version: 2021_04_19_102402) do
     t.index ["tour_id"], name: "index_galleries_on_tour_id"
   end
 
+  create_table "orders", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "tour_id", null: false
+    t.string "name"
+    t.string "phone"
+    t.string "address"
+    t.string "email"
+    t.string "note"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tour_id"], name: "index_orders_on_tour_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
   create_table "tours", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.string "img"
@@ -70,5 +84,7 @@ ActiveRecord::Schema.define(version: 2021_04_19_102402) do
 
   add_foreign_key "blogs", "blog_categories"
   add_foreign_key "galleries", "tours"
+  add_foreign_key "orders", "tours"
+  add_foreign_key "orders", "users"
   add_foreign_key "tours", "categories"
 end
