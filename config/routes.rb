@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   scope 'admin' do
     get 'dashboard', to: 'admin#index'
     # user
-    get 'all-user', to: 'admin/user#show'
+    get 'user', to: 'admin/user#show'
+    # order
+    get 'order', to: 'admin/order#show'
+    get 'confirm-order', to: 'admin/order#confirm'
+    get 'cancel-order', to: 'admin/order#cancel'
     # category
     get 'add-category', to: 'admin/category#new'
     post 'add-category', to: 'admin/category#save'

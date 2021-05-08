@@ -31,20 +31,40 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Tên người dùng</th>
+                            <th>Người đặt</th>
+                            <th>Số điện thoại</th>
                             <th>Email</th>
-                            <th>Thao tác</th>
+                            <th>Tour</th>
+                            <th>Ghi chú</th>
+                            <th>Thời gian đặt</th>
+                            <th>Trạng thái</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <% @user.each do |item| -%>
+                        <% @order.each do |item| -%>
                         <tr>
                             <td><%= item.id %></td>
-                            <td><%= item.name %></td>
+                            <td><%= item.user.name %></td>
+                            <td><%= item.phone %></td>
                             <td><%= item.email %></td>
+                            <td><%= item.tour.name %></td>
+                            <td><%= item.note %></td>
+                            <td><%= item.created_at %></td>
                             <td>
-                                <%=link_to user_path, :class=> 'btn btn-outline-warning' do %>
-                                <i class="fas fa-trash-alt"></i>
+                                <% if item.status==0 %>
+                                   <span class="badge badge-secondary">Đang chờ xử lý</span>
+                                <% elsif item.status==1 %>
+                                  <span class="badge badge-success">Đã xác nhận</span>
+                                <% else %>
+                                   <span class="badge badge-danger">Đã hủy</span>
+                                <% end %>
+                             </td>
+                            <td>
+                                <%=link_to confirm_order_path(:id => item.id), :class=> 'btn btn-outline-info' do %>
+                                    <i class="far fa-check-circle"></i>
+                                <% end %>
+                                <%=link_to cancel_order_path(:id => item.id), :class=> 'btn btn-outline-danger' do %>
+                                    <i class="fas fa-window-close"></i>
                                 <% end %>
                             </td>
                         </tr>
