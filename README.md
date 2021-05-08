@@ -10,16 +10,15 @@ git clone https://github.com/xauuu/ruby.git
 bundle install
 ```
 ``` bash
+yarn add bootstrap jquery popper.js
+yarn add @fortawesome/fontawesome-free
+```
+``` bash
 sudo service mysql start
 ```
 ``` bash
-rake db:drop
 rake db:create
 rake db:migrate
-```
-``` bash
-yarn add bootstrap jquery popper.js
-yarn add @fortawesome/fontawesome-free
 ```
 ``` bash
 mysql -u [username] -p xau_development < ruby.sql
