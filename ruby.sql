@@ -98,7 +98,7 @@ CREATE TABLE `blogs` (
 
 LOCK TABLES `blogs` WRITE;
 /*!40000 ALTER TABLE `blogs` DISABLE KEYS */;
-INSERT INTO `blogs` VALUES (2,2,'5 điểm du lịch Đà Lạt \'cực đẹp\' không đi sẽ phí','dalat.jpg',NULL,'<p>Đà Lạt thơ mộng với ngàn hoa khoe sắc và khí hậu ôn hòa, mát lạnh, khiến bao con tim lữ khách xao xuyến. Đà Lạt cứ thế, một chút gợi mở, một chút bí ẩn, hãy dành thời gian để tận hưởng hương vị cuộc sống qua 6 điểm du lịch “cực đẹp” dưới đây đang được giới trẻ yêu thích.</p>',5,'<p>Đà Lạt thơ mộng với ngàn hoa khoe sắc và khí hậu ôn hòa, mát lạnh, khiến bao con tim lữ khách xao xuyến. Đà Lạt cứ thế, một chút gợi mở, một chút bí ẩn, hãy dành thời gian để tận hưởng hương vị cuộc sống qua 6 điểm du lịch “cực đẹp” dưới đây đang được giới trẻ yêu thích.</p>','2021-04-18 08:00:30.593174','2021-04-19 10:52:18.282974'),(5,3,'Cẩm nang du lịch Trung Quốc','single_blog_1.png',NULL,'<p><i>Trung Quốc – đất nước xinh đẹp với nền văn hóa lâu đời, là điểm đến du lịch hấp dẫn ở Châu Á. Với cảnh sắc thiên nhiên phong phú, khối lượng di sản đồ sộ và nét đặc sắc văn hóa phương Đông, quốc gia láng giềng này thực sự xứng đáng là một nơi chúng ta nên đặt chân tới</i></p>',4,'<p>Mình đi vào tháng 6, là mùa hè, nhưng đến tối nhiệt độ giảm hẳn, đôi lúc còn thấy hơi se lạnh. Vậy nên các bạn hãy mang theo khăn hoặc áo khoác mỏng. Đặc biệt đây cũng là mùa mưa ở Giang Nam, những cơn mưa có thể bất chợt xuất hiện bất cứ lúc nào, vì vậy đừng quên mang theo mình 1 chiếc ô nhé.<br>Vùng đất Giang Nam xinh đẹp, trù phú, cảnh sắc vô cùng nên thơ, bạn hãy tìm trước hình ảnh về từng nơi mình đến để chọn trang phục hợp với background nha . Các bạn có thể mua một chiếc sườn xám – trang phục truyền thống của Trung Quốc, được bán rất nhiều ở các cổ trấn. Hoặc nếu có thời gian, hãy dành một buổi thuê đồ cổ trang và chụp ảnh ở Cổ trấn nha, đảm bảo bạn sẽ có một bộ ảnh vô cùng độc đáo đó.&nbsp;<br>Chuẩn bị xong xuôi rồi, bây giờ hãy cùng bọn mình lên đường thôi nào.</p>','2021-04-19 03:18:23.671700','2021-04-19 10:37:45.010969');
+INSERT INTO `blogs` VALUES (2,2,'5 điểm du lịch Đà Lạt \'cực đẹp\' không đi sẽ phí','dalat.jpg',NULL,'<p>Đà Lạt thơ mộng với ngàn hoa khoe sắc và khí hậu ôn hòa, mát lạnh, khiến bao con tim lữ khách xao xuyến. Đà Lạt cứ thế, một chút gợi mở, một chút bí ẩn, hãy dành thời gian để tận hưởng hương vị cuộc sống qua 6 điểm du lịch “cực đẹp” dưới đây đang được giới trẻ yêu thích.</p>',7,'<p>Đà Lạt thơ mộng với ngàn hoa khoe sắc và khí hậu ôn hòa, mát lạnh, khiến bao con tim lữ khách xao xuyến. Đà Lạt cứ thế, một chút gợi mở, một chút bí ẩn, hãy dành thời gian để tận hưởng hương vị cuộc sống qua 6 điểm du lịch “cực đẹp” dưới đây đang được giới trẻ yêu thích.</p>','2021-04-18 08:00:30.593174','2021-04-23 03:09:57.522784'),(5,3,'Cẩm nang du lịch Trung Quốc','single_blog_1.png',NULL,'<p><i>Trung Quốc – đất nước xinh đẹp với nền văn hóa lâu đời, là điểm đến du lịch hấp dẫn ở Châu Á. Với cảnh sắc thiên nhiên phong phú, khối lượng di sản đồ sộ và nét đặc sắc văn hóa phương Đông, quốc gia láng giềng này thực sự xứng đáng là một nơi chúng ta nên đặt chân tới</i></p>',6,'<p>Mình đi vào tháng 6, là mùa hè, nhưng đến tối nhiệt độ giảm hẳn, đôi lúc còn thấy hơi se lạnh. Vậy nên các bạn hãy mang theo khăn hoặc áo khoác mỏng. Đặc biệt đây cũng là mùa mưa ở Giang Nam, những cơn mưa có thể bất chợt xuất hiện bất cứ lúc nào, vì vậy đừng quên mang theo mình 1 chiếc ô nhé.<br>Vùng đất Giang Nam xinh đẹp, trù phú, cảnh sắc vô cùng nên thơ, bạn hãy tìm trước hình ảnh về từng nơi mình đến để chọn trang phục hợp với background nha . Các bạn có thể mua một chiếc sườn xám – trang phục truyền thống của Trung Quốc, được bán rất nhiều ở các cổ trấn. Hoặc nếu có thời gian, hãy dành một buổi thuê đồ cổ trang và chụp ảnh ở Cổ trấn nha, đảm bảo bạn sẽ có một bộ ảnh vô cùng độc đáo đó.&nbsp;<br>Chuẩn bị xong xuôi rồi, bây giờ hãy cùng bọn mình lên đường thôi nào.</p>','2021-04-19 03:18:23.671700','2021-04-23 03:09:59.804641');
 /*!40000 ALTER TABLE `blogs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -159,6 +159,42 @@ INSERT INTO `galleries` VALUES (6,4,'---\n- beauty.jpg\n- IMG_20210119_090415.jp
 UNLOCK TABLES;
 
 --
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `orders` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) NOT NULL,
+  `tour_id` bigint(20) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `note` varchar(255) DEFAULT NULL,
+  `created_at` datetime(6) NOT NULL,
+  `updated_at` datetime(6) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_orders_on_user_id` (`user_id`),
+  KEY `index_orders_on_tour_id` (`tour_id`),
+  CONSTRAINT `fk_rails_6abcbe1e3e` FOREIGN KEY (`tour_id`) REFERENCES `tours` (`id`),
+  CONSTRAINT `fk_rails_f868b47f6a` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders`
+--
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,3,4,'Tran Quang Dat','0886381845','Da Nang',NULL,'as','2021-05-06 13:47:13.811381','2021-05-06 13:47:13.811381');
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `schema_migrations`
 --
 
@@ -177,7 +213,7 @@ CREATE TABLE `schema_migrations` (
 
 LOCK TABLES `schema_migrations` WRITE;
 /*!40000 ALTER TABLE `schema_migrations` DISABLE KEYS */;
-INSERT INTO `schema_migrations` VALUES ('20210314140647'),('20210328022114'),('20210329064610'),('20210329065921'),('20210329071837'),('20210329072049'),('20210329072153'),('20210329095727'),('20210329100008'),('20210329100331'),('20210329100512'),('20210411013721'),('20210411015612'),('20210417022841'),('20210417024056'),('20210417110957'),('20210419102402');
+INSERT INTO `schema_migrations` VALUES ('20210314140647'),('20210328022114'),('20210329064610'),('20210329065921'),('20210329071837'),('20210329072049'),('20210329072153'),('20210329095727'),('20210329100008'),('20210329100331'),('20210329100512'),('20210411013721'),('20210411015612'),('20210417022841'),('20210417024056'),('20210417110957'),('20210419102402'),('20210506125816'),('20210506133221');
 /*!40000 ALTER TABLE `schema_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -252,4 +288,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-20 10:51:42
+-- Dump completed on 2021-05-07  8:44:29
