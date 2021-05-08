@@ -13,6 +13,7 @@ class HomeController < ApplicationController
     @category = Category.all
     @tour = Tour.find(params[:tour_id])
     @user = User.find_by id: session[:user_id]
+    @relate_tour = Tour.where("category_id = ?", @tour.category_id).where.not(id: params[:tour_id])
   end
 
   def blog

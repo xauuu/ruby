@@ -104,42 +104,20 @@
                 <div class="blog_right_sidebar">
                     <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title">Các tour liên quan</h3>
-                            <div class="media post_item">
-                                <%= image_tag 'TinTuc/tt1' %>
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>From life was you fish...</h3>
-                                    </a>
-                                    <p>January 12, 2019</p>
+                            
+                            <% @relate_tour.each do |item| %>
+                                <div class="media post_item">
+                                <%= image_tag(item.img.url) %>
+                                    <div class="media-body">
+                                        <a href="<%= tour_detail_path(:tour_id => item.id)%>">
+                                            <h3><%= item.name%></h3>
+                                        </a>
+                                        <p><%= number_to_currency(item.price, unit: "", precision: 0) %> VND</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="media post_item">
-                                <%= image_tag 'TinTuc/tt1' %>
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>The Amazing Hubble</h3>
-                                    </a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <%= image_tag 'TinTuc/tt1' %>
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Astronomy Or Astrology</h3>
-                                    </a>
-                                    <p>03 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <%= image_tag 'TinTuc/tt1' %>
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Asteroids telescope</h3>
-                                    </a>
-                                    <p>01 Hours ago</p>
-                                </div>
-                            </div>
+                            <% end %>
+                            
+                            
                     </aside>
                 </div>
                 
