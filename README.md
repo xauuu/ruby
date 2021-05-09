@@ -21,7 +21,7 @@ rake db:create
 rake db:migrate
 ```
 ``` bash
-mysql -u [username] -p xau_development < ruby.sql
+mysql -u root -p xau_development < ruby.sql
 ```
 ``` bash
 rails s
