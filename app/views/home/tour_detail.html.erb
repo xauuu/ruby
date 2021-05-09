@@ -28,7 +28,7 @@
                                 <%= @tour.name%>
                             </div>
                             <div class="ratings">
-                                <div class="rating_days d-flex justify-content-between">
+                                <div class="rating_days d-flex ">
                                     <span class="d-flex justify-content-center align-items-center">
                                       <% for a in 1..@tour.rating %>
                                         <i class="fa fa-star"></i>
@@ -66,7 +66,7 @@
                         
                     </div>
                     <div class="tab-pane fade" id="datve">
-                        <%= form_for :order, url: order_path do |f| %>
+                        <%= form_for :order, url: corder_path do |f| %>
                             <div class="card-body">
                                 <%=f.hidden_field :user_id, value: session[:user_id] %>
                                 <%=f.hidden_field :tour_id, value: @tour.id %>      

@@ -1,0 +1,135 @@
+.your_order {
+    padding-top: 80px;
+    background: #f7fafd;
+  }
+  
+  @media (max-width: 767px) {
+    /* line 1, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+    .your_order {
+      padding-top: 60px;
+    }
+  }
+  
+  /* line 9, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .single_place {
+    background: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    margin-bottom: 0 !important;
+  }
+  
+  /* line 15, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .single_place .thumb {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* line 18, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .single_place .thumb img {
+    width: 100%;
+    height: 155px;
+  }
+  
+  /* line 21, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .single_place .thumb .prise {
+    position: absolute;
+    background: #1ec6b6;
+    padding: 7px 18px 4px 18px;
+    display: inline-block;
+    top: 20px;
+    left: 20px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+    color: #fff;
+    font-size: 16px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  /* line 34, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .single_place .place_info {
+    padding: 27px 20px 25px 20px;
+  }
+  
+  /* line 36, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .single_place .place_info h3 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #040e27;
+    margin-bottom: 0;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  /* line 43, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .single_place .place_info p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #7a838b;
+    margin-top: 2px;
+    margin-bottom: 7px;
+  }
+  
+  /* line 52, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .single_place .place_info .rating_days span {
+    font-size: 12px;
+    color: #fdae5c;
+  }
+  
+  /* line 56, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .single_place .place_info .rating_days span a {
+    font-size: 14px;
+    color: #7a838b;
+    margin-left: 5px;
+  }
+  
+  /* line 62, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .single_place .place_info .rating_days .days {
+    font-size: 14px;
+    font-weight: 400;
+    color: #7a838b;
+  }
+  
+  /* line 66, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .single_place .place_info .rating_days .days i {
+    margin-right: 8px;
+  }
+  
+  /* line 69, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .single_place .place_info .rating_days .days a {
+    font-size: 14px;
+    color: #7a838b;
+  }
+  
+  /* line 76, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .single_place:hover {
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* line 79, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .single_place:hover .place_info h3 {
+    color: #ff4a52;
+  }
+  
+  /* line 85, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .single_place:hover .thumb .prise {
+    background: #ff4a52;
+  }
+  
+  /* line 91, ../../Arafath/CL/December/231. Travel-02/HTML/scss/_popular_place.scss */
+  .your_order .more_place_btn {
+    margin-top: 40px;
+  }

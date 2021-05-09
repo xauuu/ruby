@@ -863,3 +863,15 @@ input[type="date"]:before {
   color: #aab1b7;
 }
 // input
+
+.col-sm-2.soluong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-sm-6.tieude {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}

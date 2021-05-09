@@ -45,10 +45,10 @@ class HomeController < ApplicationController
     elsif params[:rating]
       @pagy, @tour = pagy(Tour.where("rating = ?", params[:rating]), items:6)
     elsif params[:sort_by]
-      if params[:sort_by] = "tang_dan"
-        @pagy, @tour = pagy(Tour.order(price: :desc), items:6)
-      else
+      if params[:sort_by] == "tang_dan"
         @pagy, @tour = pagy(Tour.order(price: :asc), items:6)
+      else
+        @pagy, @tour = pagy(Tour.order(price: :desc), items:6)
       end
     else
       @pagy, @tour = pagy(Tour.all, items:6)
@@ -73,7 +73,12 @@ class HomeController < ApplicationController
     else
       redirect_to login_path
     end
-    
+  end
+
+  def your_order
+    @user = User.find_by id: session[:user_id]
+    @category = Category.all
+    @order = Order.where("user_id = ?", session[:user_id])
   end
 
   def search

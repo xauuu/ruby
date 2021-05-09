@@ -1,0 +1,66 @@
+
+<div class="mt-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb_70">
+                        <h3>Đơn hàng của bạn</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-4">
+                <% @order.each do |item| %>
+                <div class="row p-1 border mb-5">
+                    <div class="col-sm-4 your_order p-1">
+                        <div class="single_place">
+                            <div class="thumb">
+                                <%= image_tag (item.tour.img.url) if item.tour.img? %>
+                                <p class="prise"><%= number_to_currency(item.tour.price, unit: "", precision: 0) %> VND</p>
+                            </div>
+                            <div class="place_info">
+                                <%= link_to tour_detail_path(:tour_id => item.tour.id) do %>
+                                    <h3><%= item.tour.name %></h3>
+                                <% end %>
+                                <p><%= item.tour.category.name %></p>
+                                <div class="rating_days d-flex justify-content-between">
+                                    <span class="d-flex justify-content-center align-items-center">
+                                      <% for a in 1..item.tour.rating %>
+                                        <i class="fa fa-star"></i>
+                                      <% end %>
+                                      <% for a in 1..(5-item.tour.rating) %>
+                                        <i class="fa fa-star-o"></i>
+                                      <% end %>
+                                        <a href="#">(20 Review)</a>
+                                    </span>
+                                    <div class="days">
+                                        <i class="far fa-clock"></i>
+                                        <a href="#"><%= item.tour.day %> Ngày</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 tieude  pl-2">
+                        <p>Tên: <%= item.name  %></p>
+                        <p>Số điện thoại: <%= item.phone  %></p>
+                        <p>Email: <%= item.email  %></p>
+                        <p>Địa chỉ: <%= item.address  %></p>
+                        <p>Ghi chú: <%= item.note  %></p>
+                        <p>Thời gian đặt tour: <%= item.updated_at.to_formatted_s(:db)  %></p>
+                    </div>
+                    <div class="col-sm-2 soluong">
+                        <% if item.status==0 %>
+                        <span class="badge badge-secondary btn-xoa p-2 mr-2">Đang chờ xử lý</span>
+                        <a href="<%= cancel_order_path(:id=>item.id) %>" class="btn btn-sm btn-outline-danger" onclick='return confirm("Hủy đơn này!")'>
+                            <i class="fas fa-window-close"></i>
+                        </a>
+                        <% elsif item.status==1 %>
+                        <span class="badge badge-success btn-xoa p-2">Đã xác nhận</span>
+                        <% else %>
+                        <span class="badge badge-danger btn-xoa p-2">Đã hủy</span>
+                        <% end %>
+                    </div>
+                </div>
+                <% end %>
+
+            </div>
+        </div>
