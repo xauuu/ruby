@@ -1,0 +1,129 @@
+<div class="header">
+    <div id="aa" class="text-center pl-name pppp">
+		Quảng Bình
+	</div>
+	<div class="pl-tt">
+		Quảng Bình là một tỉnh ven biển thuộc Bắc Trung Bộ, Việt Nam. Với bề dày văn hóa từ ngàn đời nay, cảnh quan thiên nhiên tuyệt đẹp, hữu tình cùng quần thể danh lam thắng cảnh được thế giới công nhận, Quảng Bình thật sự là thiên đường du lịch đối với những du khách trong và ngoài nước.
+	</div>
+</div>
+<div class="container mt-3">
+	<div class="row">
+		<div class="col-md-4 mt-4 d-none d-lg-block">
+			<div class="lq blog_right_sidebar">
+				<p class="tlq">Tour liên quan</p>
+				<aside class="single_sidebar_widget popular_post_widget">
+                            
+                    <% @tour.each do |item| %>
+                        <div class="media post_item">
+                            <%= image_tag item.img.url%>
+                            <div class="media-body">
+                                <a href="<%= tour_detail_path(:tour_id => item.id)%>">
+                                    <h3><%= item.name%></h3>
+                                </a>
+                                <p><%= number_to_currency(item.price, unit: "", precision: 0) %> VND</p>
+                            </div>
+                        </div>
+                    <% end %>  
+
+                </aside>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<div class="dd">
+				<p class="ddd-tt">Điểm đến</p>
+				<div class="dd-1">
+					<p class="dd-name">1. Suối nước Moọc</p>
+					<div>
+						Là một địa điểm du lịch mới nổi ở Quảng Bình nhưng vô cùng hấp dẫn du khách thập phương. Suối nước Moọc có phong cảnh non nước hữu tình và thơ mộng rất thích hợp cho những ai muốn tìm một nơi yên bình để giải tỏa căng thẳng, mệt mỏi.
+					</div>
+                    <%= image_tag 'Place/QB/suoi-nuoc-mooc-pys-travel001.jpg' %>
+					<p class="img-ttt">Suối nước Moọc phong cảnh hữu tình hấp dẫn du khách</p>
+					<div>
+						Khi tới đây bạn sẽ được dạo chơi qua dòng suối mát rượi, băng qua những cây cầy và tảng đá men theo dòng suối như một hành trình đi tìm kho báu
+					</div>
+                    <%= image_tag 'Place/QB/suoi-nuoc-mooc-2.jpg' %>
+					<p class="img-ttt">Men theo bờ suối như một hành trình đi tìm kho báu</p>
+                    <%= image_tag 'Place/QB/quang-binh-pys-travel010.jpg' %>
+					<p class="img-ttt">Nhớ tham quan thêm 2 địa điểm đẹp sông Chày và hang tối khi đến đây nhé</p>
+					<div>
+						Nếu đi vào mùa hè thì hãy mang theo bộ quần áo đi nhé, bởi vì chắc chắn bạn sẽ muốn hòa mình vào dòng nước suối trong vắt êm ả này đấy. Đi du lịch suối nước Moọc thì nên kết hợp thêm 2 địa điểm đẹp ở Quảng Bình khác là sông Chày và hang tối bởi hai điểm này cũng rất thú vị.
+					</div>
+				</div>
+				<div class="dd-1">
+					<p class="dd-name">2. Vũng Chùa - Đảo Yến</p>
+                    <%= image_tag 'Place/QB/vungchua.jpg' %>
+					<p class="img-ttt">Vũng Chùa - vùng đất linh thiêng</p>
+					<div>Vũng Chùa Đảo Yến được biết tới là nơi an nghỉ của đại tướng Võ Nguyên Giáp – vị tướng tài ba của dân tộc đã lãnh đạo những người chiến sỹ yêu nước Việt Nam chống lại áp bức của giặc ngoại sâm và giải phóng dân tộc ta khỏi ách đô hộ. Đây là nơi con dân Việt Nam tới để tỏ lòng thành kính và biết ơn tới vị đại tướng mến yêu của đất nước. Mọi người chú ý khi tới dâng hương nên ăn mặc lịch sự và không nên gây mất trật tự hay đùa nghịch ồn ào làm ảnh hưởng tới sự an nghỉ của đại tướng.
+					</div>
+                    <%= image_tag 'Place/QB/vieng-mo-dai-tuong1_zncr.jpg' %>
+					<p class="img-ttt">Nên ăn mặc lịch sự và không làm mất trật tự khi tới đây nhé</p>
+				</div>
+				<div class="dd-1">
+					<p class="dd-name">3. Bãi đá nhảy</p>
+					<div>
+						Bãi đá nhảy cũng là một bãi biển đẹp và độc đáo của Quảng Bình mà các bạn nên tới khi đi du lịch. Tên là bãi đá nhảy bởi vì ở bãi tắm này có rất nhiều hòn đá từ kích cỡ lớn tới nhỏ vươn mình ra biển cả.
+					</div>
+                    <%= image_tag 'Place/QB/quang-binh-pys-travel021.jpg' %>
+					<p class="img-ttt">Những vách đá to như điểm nhấn cho màu biển xanh trong</p>
+					<div>
+						Nước biển ở bãi đá nhảy cũng khá trong, lại thêm những hòn đá chắn ngang làm cho cảm giác bãi tắm không được rộng rãi như ở biển Nhật Lệ nhưng khá an toàn. Các bạn đi tới bãi đá nhảy ngoài tắm biển thì chủ yếu vẫn là chụp ảnh.
+					</div>
+                    <%= image_tag 'Place/QB/danhay.jpg' %>
+					<p class="img-ttt">Mang vẻ hoang sơ, chân thực, đây được coi như danh lam thắng cảnh độc đáo ở Quảng Bình</p>
+					<div>Những phiến đá muôn hình vạn trạng của bãi đá nhảy mang lại cho bức ảnh cảm giác hoang sơ, chân thực hơn. Đây có thể coi như là một danh lam thắng cảnh độc đáo ở Quảng Bình mà bạn nên tới.</div>
+				</div>
+				<div class="dd-1">
+					<p class="dd-name">4. Suối khoáng nóng Bang</p>
+					<div>Từ lâu suối khoáng nóng Bang đã trờ thành một điểm đến hấp dẫn của Quảng Bình và thu hút rất nhiều lượt khách tới mỗi năm.</div>
+                    <%= image_tag 'Place/QB/bang.jpg' %>
+					<p class="img-ttt">Suối nước nóng Bang luôn thu hút rất nhiều du khách mỗi năm</p>
+					<div>Suối nước khoáng nóng Bang có nguồn nước được cung cấp hoàn toàn từ thiên nhiên nên nếu ngâm mình trong suối khoáng nóng lâu sẽ giúp các bạn cải thiện được nhiều căn bệnh lẫn đề phòng được bệnh tật xâm nhập.</div>
+				</div>
+			</div>
+			<div class="dd mt-5">
+				<p class="ddd-tt">Ẩm thực</p>
+				<div class="dd-1">
+					<p class="dd-name">1. Cháo canh</p>
+                    <%= image_tag 'Place/QB/chaocanh.png' %>
+					<p class="img-ttt">Món cháo canh mang đậm hương vị quê hương</p>
+					<div>Sỡ dĩ tên gọi cháo canh xuất phát từ cách nấu của món ăn này giống như nấu cháo và nấu canh. Có thể để ý, sau khi trần qua sợi bánh (bột) thì chủ quán cho vào nồi nước dùng một lúc để sợi bánh ngấm gia vị và mềm hơn.</div>
+                    <%= image_tag 'Place/QB/chaocanh1.png' %>
+					<p class="img-ttt">Sợi bánh mịn để làm nên cháo canh</p>
+					<div>Nếu như ngày xưa, nguyên liệu chính để làm nên món cháo canh ngoài gạo ra thì chỉ cần cá đồng hoặc cá biển rồi nêm thêm ít muối, ruốc, rau thơm và ngò vào thì ngày nay kỳ công hơn với sườn heo, cá lóc, ghẹ và tôm tươi.</div>
+                    <%= image_tag 'Place/QB/chaocanh2.png' %>
+					<p class="img-ttt">Để có một tô cháo canh đúng vị Quảng Bình, nguyên liệu chuẩn bị rất kỳ công.</p>
+					<div>Tới khám phá Quảng Bình trong chuyến đi này, thực khách sẽ được thưởng thức món cháo canh hòa quyện trong nước dùng xương hầm ngọt lịm, đậm đà. Sợi bánh trắng đục, nhỏ nhưng dai.</div>
+				</div>
+				<div class="dd-1">
+					<p class="dd-name">2. Bánh bột lọc</p>
+					<div>Bánh bột lọc là món ăn gắn liền với vùng đất Quảng Bình. Du lịch tới Quảng Bình mà bạn chưa thử qua món ăn này thì coi như chưa tới nơi đây.</div>
+                    <%= image_tag 'Place/QB/botloc.png' %>
+					<p class="img-ttt">Đến du lịch Quảng Bình nhất định bạn phải thử món bánh bột lọc</p>
+					<div>Món bánh bột lọc được làm từ những nguyên liệu hết sức đơn giản, mang đậm bản sắc văn hóa nơi đây. Bao gồm bột sắn tươi, tôm, thịt, mộc nhĩ, đậu xanh, các loại gia vị truyền thống và dùng lá chuối để gói. </div>
+                    <%= image_tag 'Place/QB/botloc2.jpg' %>
+					<p class="img-ttt">Những nguyên liệu làm bánh bột lọc cũng vô cùng dễ kiếm và quen thuộc.</p>
+					<div>Để làm được phần nhân bánh với hương vị đậm đà, mặn ngọt đan xen, những người làm bánh phải trộn các nguyên liệu đã chuẩn bị với muối, tiêu rồi đem xào với dầu ăn. Phần vỏ bên ngoài cần nước lạnh, bột năng, dầu ăn, muối, khuấy đều tay trên lửa nhỏ đến khi đặc dẻo. Sau đó được cho lên lá, thêm nhân vào và gói chúng lại. Cuối cùng, đem hấp bánh khoảng 30 phút.</div>
+					<%= image_tag 'Place/QB/botloc3.png' %>
+					<p class="img-ttt">Chế biến bánh bột lọc Quảng Bình đơn giản, không quá khó.</p>
+					<div>Để món ăn này tăng thêm hương vị, nước chấm là một gia vị không thể bỏ qua. Một chút vị cay nồng của ớt quyện trong vị thanh ngọt của đường và nước mắm đậm đà góp phần tạo nên sự hoàn hảo cho món bánh bột lọc.</div>
+					<%= image_tag 'Place/QB/botloc4.png' %>
+					<p class="img-ttt">Để món ăn thêm phần đậm đà, nước chấm là một gia vị không thể thiếu.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+    <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$('#aa').each(function() {
+                var elem = $(this);
+                setInterval(function() {
+                    if (elem.hasClass('pl-name')) {
+                        elem.addClass('pl-name-1').removeClass('pl-name')
+                    } else {
+                        elem.addClass('pl-name').removeClass('pl-name-1')
+                    }    
+                }, 500);
+            });
+		});
+	</script>

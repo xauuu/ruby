@@ -1,0 +1,127 @@
+.header{
+	padding-bottom: 13vh;
+	/* height: 60vh; */
+    background-image: linear-gradient(45deg,rgba(2,33,64, 0.5) 55%,rgba(45,95,93,0.55))
+    ,url('Place/qbin.jpg');
+    background-size: cover;
+	background-position: center;
+	/* background-attachment: fixed; */
+}
+.pppp{
+	font: bold 4.5em/1.5 Bebas, sans-serif;
+	color: #5CA17C; /*non-webkit fallback*/
+	font-size: 72px;
+	text-transform: uppercase;
+	background-image: linear-gradient(to bottom, #26BDA6, #FF9F65, #DED37E, #26BDA6);
+	background-size: auto 250%;
+	/* transition: background-position 0.3s; */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	line-height: 200px;
+}
+.pl-name {
+	background-position: 0 100%;
+}
+.pl-name-1 {
+	background-position: 0 0;
+	cursor: pointer;
+}
+.pl-tt{
+	font-size: 17px;
+	color: #fff;
+	padding: 0 30vh;
+	text-align: center;
+}
+/* ///BOdy */
+/* .lq{
+	position: sticky;
+	top: 90px;
+} */
+.lq p.tlq{
+	font-size: 17px;
+	text-transform: uppercase;
+	color: #d56b03;
+	border-bottom: solid 2px #d56b03;
+}
+.qc img{
+	width: 100%;
+	height: auto;
+}
+.ddd-tt{
+	font-size: 30px;
+	color: #1232df;
+	text-transform: uppercase;
+	text-align: center
+}
+.dd img{
+	/* display: block !important;
+	margin-left: auto !important;
+	margin-right: auto !important; */
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+}
+.dd div{
+	text-align: justify;
+}
+.img-ttt{
+	text-align: center;
+	font-size: 14px;
+	font-style: italic;
+}
+.dd-name{
+	font-size: 17px;
+	color: red;
+	margin-top: 20px;
+}
+.pl-tour{
+	list-style: none;
+	padding-left: 5px !important;
+}
+.pl-tour li{
+	width: 100%;
+	height: auto;
+    border-bottom: solid 1px #a3a2a2;
+    padding: 5px 0;
+
+}
+.pl-tour img{
+	width: 55px;
+	height: 40px;
+	object-fit: cover;
+	float: left;
+	border-radius: 10px;
+	margin-right: 5px;
+}
+.pl-tour a{
+	text-decoration: none;
+}
+.pl-tour a:hover{
+	color: red;
+}
+.nn{
+	font-size: 14px;
+}
+.tx p{
+	font-size: 17px;
+	text-transform: uppercase;
+	color: #d56b03;
+	border-bottom: solid 2px #d56b03;
+}
+.tx ul{
+	list-style: none;
+	padding-left: 5px;
+	margin-bottom: 10px;
+}
+.tx ul li{
+	border-bottom: solid 1px #ababf1;
+	padding: 5px 0;
+}
+.tx a{
+	text-decoration: none;
+	display: block;
+	color: #275f9b;
+}
+.tx a:hover{
+	color: red;
+}

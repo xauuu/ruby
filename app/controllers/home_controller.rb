@@ -56,6 +56,12 @@ class HomeController < ApplicationController
     @user = User.find_by id: session[:user_id]
   end
 
+  def place
+    user = User.find_by id: session[:user_id]
+    @category = Category.all
+    @tour = Tour.where("name LIKE ?", "%#{"Quảng Binh"}%")
+  end
+
   def about
     @about_active = 'active'
     @category = Category.all
@@ -86,7 +92,7 @@ class HomeController < ApplicationController
     @category = Category.all
     @user = User.find_by id: session[:user_id]
 
-    if params[:search][:category_id]
+    if !params[:search][:category_id].blank?
       @pagy, @tour = pagy(Tour.where("category_id = ? and name LIKE ?", params[:search][:category_id], "%#{params[:search][:key]}%"), items:6)
     else
       @pagy, @tour = pagy(Tour.where("name LIKE ?", "%#{params[:search][:key]}%"), items:6)

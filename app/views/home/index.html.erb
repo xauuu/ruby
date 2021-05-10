@@ -35,10 +35,7 @@
 </header>
 <div class="container-fluid">
 	<div id="review">
-		<div class="col-md-12 text-center text-justify">
-			<h2>Welcome to Xau Travel</h2><hr class="hr4">
-			<p class="font">Xau Travel cung cấp cho bạn những dịch vụ du lịch tốt nhất và hấp dẫn nhất Việt Nam</p>
-		</div>
+		
 		<div class="row text-center">
 			<div class="col-md-3 wow bounceInLeft">
 				<div class="card mb-4">
@@ -75,7 +72,6 @@
                 <div class="col-lg-6">
                     <div class="section_title text-center mb_70">
                         <h3>Điểm đến yêu thích</h3>
-                        <p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
                     </div>
                 </div>
             </div>
@@ -86,8 +82,9 @@
                             <%= image_tag ("Place/vlh.jpg") %>
                         </div>
                         <div class="content">
-                            <p class="d-flex align-items-center">Quảng Bình <a href="travel_destination.html">  07 Places</a> </p>
-                            
+                            <%= link_to place_path do%>
+                                <p class="d-flex align-items-center">Quảng Bình  </p>
+                            <% end %>        
                         </div>
                     </div>
                 </div>
